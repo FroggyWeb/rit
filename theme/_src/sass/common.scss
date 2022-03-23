@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+@import "mixin/_media";
+@import "mixin/_rem";
+@import "mixin/_placeholder";
+@import "mixin/_font";
+@import "mixin/_triangle";
+@import "_var";
+
+@import "base/_base";
+@import "base/_helper";
+@import "mixin/_grid-m.scss";
+
+@import "./block/**/*.scss";

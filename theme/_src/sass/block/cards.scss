@@ -1,0 +1,50 @@
+.service-cards {
+	margin-top: 2 * $lg;
+	display: grid;
+	gap: $lg;
+	@include r(xxl) {
+		grid-template-columns: repeat(4, 1fr);
+		&--index .service-card:nth-child(3),
+		&--index .service-card:nth-child(4) {
+			grid-column: span 2;
+		}
+	}
+}
+.service-card {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: $lg;
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: $c-txt;
+		.service-card__ico {
+			background-color: $c-main;
+			color: #fff;
+		}
+	}
+
+	&__ico {
+		font-size: 40px;
+		padding: 1em;
+		color: $c-main;
+		transition: all 0.3s;
+	}
+	&__cnt {
+		margin-top: auto;
+		max-width: 500px;
+	}
+	&__title {
+		margin: 32px 0 0;
+		font-family: $f-title;
+		font-size: 22px;
+		font-weight: 400;
+	}
+	&__txt {
+		margin: 1em 0 0;
+	}
+	&__footer {
+		margin-top: 1em;
+	}
+}

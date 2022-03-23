@@ -1,0 +1,27 @@
+$breakpoints: (
+	"xs": 360px,
+	"sm": 540px,
+	"md": 767px,
+	"lg": 992px,
+	"xl": 1024px,
+	"xxl": 1400px,
+) !default;
+
+$f-base: 16px/1.4 "Jost", sans-serif;
+$f-title: "Prata", sans-serif;
+$f-color: #555;
+
+$l-g: 15px;
+$lg: 2.5rem;
+
+$c-main: #6682d4;
+$c-sec: #8ba434;
+$c-light: #eceef2;
+$c-txt: #2f2c26;
+$c-ltxt: #9ba1b3;
+$c-link: #345dee;
+$c-active: $c-main;
+
+$hc-offcanvas-nav-background-color: #fff;
+$hc-offcanvas-nav-text-color: #18214d;
+$hc-offcanvas-nav-text-size: 16px;

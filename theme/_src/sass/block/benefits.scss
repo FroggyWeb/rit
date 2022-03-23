@@ -1,0 +1,44 @@
+.benefits {
+	display: grid;
+	gap: $lg;
+	background: url("@/img/bg/bg_benefits.png") no-repeat center center;
+	@include r(xl) {
+		gap: 2 * $lg;
+		grid-template-columns: 33% 1fr;
+		background-position: 100% 0;
+	}
+	&__cnt {
+		@include r(xl) {
+			padding: 2 * $lg 0;
+		}
+	}
+	&__img {
+		background: url("@/img/angel.jpg") no-repeat 50% 50% / cover;
+	}
+	&__title {
+	}
+}
+
+.benefits-list {
+	display: grid;
+	gap: $lg;
+	@include r(md) {
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 2 * $lg;
+		gap: 80px 100px;
+	}
+}
+.benefit {
+	&__ico {
+		font-size: 46px;
+		color: $c-main;
+	}
+	&__title {
+		margin-top: 32px;
+		font-weight: 500;
+		font-size: 22px;
+	}
+	&__txt {
+		margin-top: 1em;
+	}
+}

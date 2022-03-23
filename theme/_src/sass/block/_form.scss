@@ -1,0 +1,105 @@
+// ++++++++++++++++++++++++++++
+// Form
+
+input:not([type="submit"]),
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea {
+	padding: 1em;
+	border-radius: 8px;
+	background-color: $c-light;
+	border: none;
+	display: block;
+	min-width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba($c-main, 0.5);
+	@include placeholder() {
+		opacity: 0.5;
+	}
+}
+
+.form-line {
+	position: relative;
+	margin-bottom: 0.75 * $lg;
+	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
+		width: 100%;
+	}
+	.icon {
+		position: absolute;
+		font-size: 24px;
+		line-height: 1;
+	}
+	.icon--prepend {
+		top: 12px;
+		left: 12px;
+		input {
+			padding-left: 1em;
+		}
+	}
+}
+
+.form__title {
+	font-size: 30px;
+	font-weight: 800;
+	line-height: 1.2;
+	margin: 0 0 1em;
+}
+
+.form-footer {
+	display: flex;
+	gap: 1em;
+	align-items: flex-start;
+	input[type="checkbox"] {
+		flex: 0 0 auto;
+	}
+}
+
+.popup-form {
+	display: none;
+	max-width: 500px;
+}
+
+// ++++++++++++++++++++++++++++
+// button
+
+.btn {
+	display: inline-block;
+	flex: 0 0 auto;
+	font-weight: 500;
+	padding: 1em 1em 1em;
+	text-decoration: none;
+	line-height: 1;
+	border-radius: 0.5em;
+	border: none;
+	appearance: none;
+	color: $c-txt;
+	position: relative;
+	overflow: hidden;
+	background: #e1e5f1;
+	border-radius: 50px;
+	&:not(.btn--title):hover {
+		cursor: pointer;
+		box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
+	}
+	&--title {
+		font-weight: 400;
+		color: $c-main;
+		padding: 0.5em 1.5em;
+		margin-bottom: 50px;
+	}
+
+	&--big {
+		padding: 1.5em 3em;
+	}
+	&--dark {
+		background-color: $c-main;
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
+	}
+}

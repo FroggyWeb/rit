@@ -1,0 +1,20 @@
+.intro {
+	margin-bottom: 120px;
+	&__container {
+		background: url("@/img/bg/bg-intro.png") no-repeat right center;
+		background-size: auto 100%;
+		background-origin: content-box;
+	}
+	&__title {
+		font-size: 24px;
+		font-size: clamp(24px, 5vw, 55px);
+		margin: 0 0 0.75em 0;
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+	}
+	&__footer-btn {
+		margin-right: $lg;
+	}
+}
