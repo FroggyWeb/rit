@@ -48,3 +48,57 @@
 		margin-top: 1em;
 	}
 }
+
+.catalog-mini {
+	&__cards {
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+.card {
+	display: block;
+	margin: -1px 0 0 -1px;
+	border: 1px solid #e1e5f1;
+	text-decoration: none;
+	color: $c-txt;
+	padding: $lg;
+	transition: all 0.3s;
+	position: relative;
+	&:hover {
+		color: $c-txt;
+		border-color: $c-main;
+		z-index: 1;
+	}
+	&__img {
+		position: relative;
+		height: 240px;
+		margin: (-$lg) (-$lg) 20px (-$lg);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__rating {
+		font-size: 18px;
+		margin-bottom: 32px;
+		span {
+			background-image: url("@/img/star-blue.svg");
+		}
+	}
+	&__title {
+		font: 400 22px $f-title;
+		margin: 0 0 16px;
+	}
+	&__desc {
+		margin: 0 0 16px;
+	}
+	&__price {
+		margin-top: 32px;
+		font: 400 22px $f-title;
+	}
+}

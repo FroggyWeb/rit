@@ -28,3 +28,42 @@
 		}
 	}
 }
+
+.rating {
+	span {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+.price {
+}
+
+.rating[data-rating="4"] {
+	span:nth-child(5) {
+		opacity: 0.3;
+	}
+}
+.rating[data-rating="3"] {
+	span:nth-child(5),
+	span:nth-child(4) {
+		opacity: 0.3;
+	}
+}
+.rating[data-rating="2"] {
+	span:nth-child(5),
+	span:nth-child(4),
+	span:nth-child(3) {
+		opacity: 0.3;
+	}
+}
+.rating[data-rating="1"] {
+	span:nth-child(5),
+	span:nth-child(4),
+	span:nth-child(3),
+	span:nth-child(2) {
+		opacity: 0.3;
+	}
+}

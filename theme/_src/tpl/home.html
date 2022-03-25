@@ -1,0 +1,52 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<!-- begin Intro -->
+<div class="intro">
+  <div class="intro__container">
+    <div class="btn btn--title">Помогаем в трудную минуту</div>
+    <h1 class="title intro__title">Ритуальная служба города<br> Санкт-Петербург и<br> Ленинградской области</h1>
+    <div class="intro__footer">
+      <a href="#" class="btn btn--dark btn--big intro__footer-btn">Нужна помощь</a>
+      <a href="tel:+7 (924) 240-90-74" class="contact header__contacts--tel">
+        <div class="contact__cnt">
+          <div class="contact__pre light-txt">Круглосуточная линия</div>
+          <div class="contact__txt">8 (800) 240-90-74</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="services section section--bg">
+    <div class="btn btn--title">Наши услуги</div>
+    <div class="section-intro">
+      <h2 class="title-section">Мы оказываем ритуальный сервис высокого качества</h2>
+      <p>Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными профессионалами и грамотной
+      организации церемонии прощания.</p>
+    </div>
+
+    <ul class="inner-nav inner-nav--right">
+      <li class="inner-nav__item">
+        <a href="#" class="inner-nav__link">Все услуги</a>
+      </li>
+      <li class="inner-nav__item">
+        <a href="#" class="inner-nav__link">О нас</a>
+      </li>
+      <li class="inner-nav__item">
+        <a href="#" class="inner-nav__link">Отзывы</a>
+      </li>
+    </ul>
+
+    {% include "parthtml/services-cards.html" %}
+
+  </div>
+
+  {% include "parthtml/benefits.html" %}
+
+  {% include "parthtml/catalog-mini.html" %}
+
+  {% include "parthtml/form-call.html" %}
+
+ </div>
+<!-- end Intro -->
+{% endblock %}
+
