@@ -19,12 +19,20 @@
 .section-intro {
 	@include r("md") {
 		display: grid;
-		gap: $lg;
+		gap: 0.5 * $lg $lg;
 		align-items: end;
 		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2 * $lg;
 		p {
 			font-size: 18px;
-			margin: 1em 0 0.5em;
+			margin: 0 0 0.5em;
+		}
+	}
+	&--title-line {
+		align-items: start;
+		.title-section {
+			grid-column: span 2;
+			margin-bottom: 2rem;
 		}
 	}
 }

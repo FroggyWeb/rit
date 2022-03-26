@@ -1,0 +1,80 @@
+summary {
+	display: block;
+}
+
+summary::-webkit-details-marker,
+summary::marker {
+	display: none;
+}
+
+.marker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 26px;
+	height: 26px;
+	position: relative;
+	pointer-events: none;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.marker::before,
+.marker::after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 2px;
+	background: $c-txt;
+	position: absolute;
+	pointer-events: all;
+}
+
+.marker::after {
+	transform: rotate(90deg);
+}
+
+.faq-list {
+	&__item {
+		padding: var(--lg);
+		border: 1px solid $c-light;
+		margin-top: -1px;
+		transition: all 0.3s;
+		&[open] {
+			background-color: $c-light;
+		}
+	}
+	&__q {
+		position: relative;
+		font-weight: 500;
+		font-size: 22px;
+		padding-right: 2 * $lg;
+		cursor: pointer;
+	}
+	&__a {
+		margin-top: $lg;
+		p {
+			margin-bottom: 0;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		@include r(md) {
+			position: relative;
+			padding-left: 50px;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 2px;
+				height: 36px;
+				background-color: $c-main;
+				transform: skewX(-35deg);
+				transform-origin: bottom right;
+			}
+		}
+	}
+}

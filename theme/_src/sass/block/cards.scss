@@ -13,22 +13,61 @@
 .service-card {
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
-	padding: $lg;
 	text-decoration: none;
-	color: inherit;
-	&:hover {
-		color: $c-txt;
+
+	&--service {
+		background-color: #fff;
+		padding: $lg;
+		color: inherit;
+		&:hover {
+			color: $c-txt;
+			.service-card__ico {
+				background-color: $c-main;
+				color: #fff;
+			}
+		}
 		.service-card__ico {
-			background-color: $c-main;
+			color: $c-main;
+			background-color: #e1e5f1;
+		}
+	}
+
+	&--tarif {
+		color: #fff;
+		&:hover {
 			color: #fff;
+			.service-card__ico {
+				color: #fff;
+			}
+			.service-card__arrow {
+				border-color: #fff;
+			}
+		}
+		.service-card__ico {
+			color: #fff;
+			background-color: $c-dark;
+		}
+		.service-card__arrow {
+			font-size: 28px;
+			position: relative;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			border: 1px solid transparent;
+			margin-left: -20px;
+			transition: all 0.3s;
+			.iconsvg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 	}
 
 	&__ico {
 		font-size: 40px;
 		padding: 1em;
-		color: $c-main;
 		transition: all 0.3s;
 	}
 	&__cnt {
@@ -49,13 +88,92 @@
 	}
 }
 
-.catalog-mini {
-	&__cards {
-		margin-top: 50px;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+.cart-img {
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: $lg;
+	z-index: 1;
+	@include adaptiv("min-height", 500, 250, 1);
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#000, 0.5);
+		z-index: -1;
+		transition: background 0.3s;
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			background-color: rgba($c-main, 0.5);
+		}
+		.cart-img__link {
+			background-color: $c-main;
+		}
+	}
+	&--article {
+	}
+	&--religions {
+		.cart-img__title {
+			font-size: 32px;
+		}
+	}
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -2;
+	}
+	&__link {
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		background-color: $c-light;
+		position: relative;
+		font-size: 28px;
+		color: $c-txt;
+		transition: all 0.3s;
+		margin-bottom: $lg;
+		.arrow-left {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__data {
+		padding-right: 0.5em;
+		border-right: 1px solid;
+	}
+	&__rubric {
+		margin-left: 0.3em;
+	}
+	&__cnt {
+		margin-top: auto;
+	}
+	&__info {
+		margin-bottom: 1em;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $c-ltxt;
+	}
+	&__desc {
+		margin: 1em 0 0;
+	}
+	&__title {
+		font: 400 22px $f-title;
 	}
 }
+
 .card {
 	display: block;
 	margin: -1px 0 0 -1px;

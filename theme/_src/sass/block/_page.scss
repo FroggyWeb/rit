@@ -1,3 +1,7 @@
+:root {
+	--lg: 40px;
+}
+
 pre {
 	font-family: inherit;
 	margin: 0;
@@ -38,6 +42,17 @@ a[href*="tel"] {
 	text-decoration: none;
 	color: inherit;
 	white-space: nowrap;
+}
+
+.link-invert {
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.3s;
+	&:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
 }
 
 .iconsvg {
@@ -106,6 +121,10 @@ a[href*="tel"] {
 		padding: 100px;
 		background-color: $c-light;
 	}
+	&--dark {
+		background-color: $c-main;
+		color: #fff;
+	}
 }
 
 .title {
@@ -132,7 +151,6 @@ a[href*="tel"] {
 		width: 1em;
 		height: 1em;
 		padding: 0.75em;
-		background-color: #e1e5f1;
 		color: $c-main;
 		.iconsvg {
 			position: absolute;
@@ -150,6 +168,7 @@ a[href*="tel"] {
 .title-link {
 	display: flex;
 	align-items: flex-end;
+	margin-bottom: 2 * $lg;
 }
 
 .more {
@@ -160,4 +179,56 @@ a[href*="tel"] {
 		margin-left: auto;
 		margin-bottom: 0.25em;
 	}
+}
+
+.tarif {
+	background: $c-main url("@/img/bg/bg__tarif.png") no-repeat left center;
+}
+.tarif-list {
+	display: grid;
+	gap: $lg;
+	@include r(lg) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.catalog-mini {
+	&__cards {
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.configurator {
+	background: $c-light url("@/img/bg/bg-configurator.png") no-repeat left top /
+		cover;
+	&__wrap {
+		max-width: 600px;
+	}
+	&__txt {
+		margin: 1.75em 0 0;
+		font-size: 18px;
+	}
+	&__link {
+		margin-top: 50px;
+		.btn {
+			width: 320px;
+		}
+	}
+}
+
+.article-list {
+	display: grid;
+	gap: $lg;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.religions {
+	background: $c-light url("@/img/bg/bg_right.png") no-repeat right top;
+}
+.religions-list {
+	display: grid;
+	gap: $lg;
+	grid-template-columns: repeat(2, 1fr);
 }
