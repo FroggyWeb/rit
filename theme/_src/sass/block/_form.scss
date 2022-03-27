@@ -82,10 +82,11 @@ textarea:focus {
 		box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
 	}
 	&--title {
+		font-size: 16px;
 		font-weight: 400;
 		color: $c-main;
 		padding: 0.5em 1.5em;
-		margin-bottom: 50px;
+		margin: 0 0 50px;
 	}
 
 	&--big {
@@ -105,4 +106,22 @@ textarea:focus {
 	text-align: center;
 	background: $c-light url("@/img/bg/bg_form_call.png") no-repeat bottom
 		center;
+}
+
+.form-call-cnt.form-call-dark {
+	background: $c-main url("@/img/bg/bg_form_call-dark.png") no-repeat bottom
+		center;
+	color: #fff;
+}
+.form-call-dark {
+	.ico--round {
+		background-color: $c-light;
+	}
+	.contact__cnt {
+		text-align: left;
+	}
+	.form-line--inline {
+		justify-content: center;
+		margin-bottom: 0;
+	}
 }

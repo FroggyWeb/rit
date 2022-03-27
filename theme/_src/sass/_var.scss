@@ -12,13 +12,7 @@ $f-title: "Prata", sans-serif;
 $f-color: #555;
 
 $l-g: 15px;
-$lg: 40px;
-
-@include rmax(600) {
-	:root {
-		--lg: 20px !important;
-	}
-}
+$lg: 2.25rem;
 
 $c-main: #6682d4;
 $c-sec: #8ba434;

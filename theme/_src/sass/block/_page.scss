@@ -1,7 +1,3 @@
-:root {
-	--lg: 40px;
-}
-
 pre {
 	font-family: inherit;
 	margin: 0;
@@ -21,6 +17,10 @@ body {
 //   outline: 1px solid green
 a {
 	transition: all 0.3s;
+}
+
+p:first-child {
+	margin-top: 0;
 }
 
 .page {
@@ -231,4 +231,65 @@ a[href*="tel"] {
 	display: grid;
 	gap: $lg;
 	grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-about {
+	display: flex;
+	align-items: center;
+	padding-bottom: $lg;
+	gap: $lg;
+	border-bottom: 1px solid $c-light;
+	&__right {
+		display: flex;
+		gap: $lg;
+		margin-left: auto;
+	}
+}
+
+.footer-link {
+	padding: 2 * $lg 0 3 * $lg;
+	display: flex;
+	gap: $lg;
+	@include r(lg) {
+	}
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		gap: $lg;
+		@include r(lg) {
+			margin-left: auto;
+			order: 2;
+		}
+	}
+}
+
+.footer-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: $lg;
+	@include r(md) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	&__title {
+		& > .footer-nav__link {
+			font-family: $f-title;
+			font-size: 22px;
+			margin-bottom: 1em;
+		}
+	}
+	&__link {
+		display: inline-block;
+		text-decoration: none;
+		color: $c-txt;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		& > .footer-nav__item:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+	}
 }

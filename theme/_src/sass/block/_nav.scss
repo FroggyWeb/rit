@@ -7,7 +7,6 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
 	}
 	&__item {
 		position: relative;
@@ -15,12 +14,14 @@
 	&__link {
 		display: block;
 		text-decoration: none;
-
 		color: $c-txt;
 	}
 }
 
 @include r(lg) {
+	.nav > .nav__list {
+		display: flex;
+	}
 	.nav > .nav__list > .nav__item > .nav__link {
 		padding: 15px clamp(0.5em, 0.25vw, 2em);
 	}
@@ -28,46 +29,13 @@
 		position: absolute;
 		min-width: 150px;
 		left: 0;
-		top: 100%;
 		z-index: 100;
 		background-color: #fff;
 		filter: drop-shadow(0px 0px 5px rgba(#000, 0.3));
-		flex-direction: column;
-		visibility: hidden;
-		opacity: 0;
-		transform: translateY(100px);
+		// visibility: hidden;
+		// opacity: 0;
 		transition: all 0.3s 0.3s;
 	}
-	// .nav__item-sub {
-	// 	ul .nav__link {
-	// 		font-weight: normal;
-	// 		padding: rem(6) rem(13);
-	// 	}
-	// 	&:hover {
-	// 		& > .nav__link::after {
-	// 			transform: rotate(180deg);
-	// 		}
-	// 		& > ul {
-	// 			visibility: visible;
-	// 			opacity: 1;
-	// 			transform: none;
-	// 		}
-	// 	}
-	// 	& > .nav__link {
-	// 		&::after {
-	// 			content: "";
-	// 			display: inline-block;
-	// 			width: 1em;
-	// 			height: 1em;
-	// 			position: relative;
-	// 			top: 0.15em;
-	// 			margin-left: 0.25em;
-	// 			transition: all 0.3s;
-	// 			background: url("@/img/icon/chevron-down.svg") no-repeat 50% 50% /
-	// 				cover;
-	// 		}
-	// 	}
-	// }
 }
 
 .burger {
@@ -110,15 +78,21 @@
 	}
 }
 
-.hc-nav-trigger {
-	position: relative;
-	top: 0;
-	margin-left: $lg;
+.nav-desktop-only {
+	@include rmax(lg) {
+		display: none !important;
+	}
 }
 
-.hc-offcanvas-nav .nav__list {
-	flex-direction: column;
-}
+// .hc-nav-trigger {
+// 	position: relative;
+// 	top: 0;
+// 	margin-left: $lg;
+// }
+
+// .hc-offcanvas-nav .nav__list {
+// 	flex-direction: column;
+// }
 
 .inner-nav {
 	list-style: none;

@@ -38,7 +38,7 @@ summary::marker {
 
 .faq-list {
 	&__item {
-		padding: var(--lg);
+		padding: $lg;
 		border: 1px solid $c-light;
 		margin-top: -1px;
 		transition: all 0.3s;

@@ -1,7 +1,11 @@
 .contact {
 	text-decoration: none;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
 
 	&__ico {
 		font-size: 26px;
@@ -46,8 +50,6 @@
 		background-size: cover;
 	}
 }
-.price {
-}
 
 .rating[data-rating="4"] {
 	span:nth-child(5) {
@@ -73,5 +75,61 @@
 	span:nth-child(3),
 	span:nth-child(2) {
 		opacity: 0.3;
+	}
+}
+
+.review {
+	border: 1px solid $c-light;
+	padding: $lg;
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2em;
+		.rating span {
+			font-size: 16px;
+			background-image: url("@/img/star-blue.svg");
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 22px;
+	}
+	&__cnt {
+	}
+	&__footer {
+		margin-top: auto;
+	}
+	&__more {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 500;
+	}
+	&--banner {
+		.review__header {
+			margin: 1em 0 0;
+		}
+		.rating span {
+			font-size: 16px;
+			background-image: url("@/img/star-white.svg");
+		}
+	}
+}
+
+.reviews {
+	display: grid;
+	gap: $lg;
+	@include r(lg) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&--index {
+		@include r(lg) {
+			.review:nth-child(3n + 1) {
+				grid-column: span 2;
+			}
+		}
 	}
 }
