@@ -2,7 +2,7 @@
 // Навигация
 .nav {
 	margin: auto;
-	font-family: $f-title;
+	justify-content: center;
 	&__list {
 		list-style: none;
 		margin: 0;
@@ -10,11 +10,26 @@
 	}
 	&__item {
 		position: relative;
+		transition: all 0.3s;
 	}
 	&__link {
+		font-family: $f-title;
 		display: block;
 		text-decoration: none;
 		color: $c-txt;
+	}
+}
+
+@include rm(1025, 1590) {
+	.header {
+		flex-wrap: wrap;
+	}
+	.nav {
+		order: 10;
+		margin-top: $lg;
+	}
+	.nav > .nav__list > .nav__item > .nav__link {
+		font-size: 18px;
 	}
 }
 
@@ -23,18 +38,80 @@
 		display: flex;
 	}
 	.nav > .nav__list > .nav__item > .nav__link {
-		padding: 15px clamp(0.5em, 0.25vw, 2em);
+		padding: 25px clamp(0.75em, 1vw, 2em);
 	}
 	.nav__item-sub > ul {
+		padding: 20px;
 		position: absolute;
-		min-width: 150px;
-		left: 0;
+		left: -50px;
 		z-index: 100;
 		background-color: #fff;
-		filter: drop-shadow(0px 0px 5px rgba(#000, 0.3));
-		// visibility: hidden;
-		// opacity: 0;
+		filter: drop-shadow(0px 0px 10px rgba(#000, 0.15));
+		visibility: hidden;
+		opacity: 0;
 		transition: all 0.3s 0.3s;
+		&:before {
+			content: "";
+			width: 30px;
+			height: 30px;
+			border-radius: 4px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: -15px;
+			left: 75px;
+			background-color: #fff;
+		}
+	}
+	.nav__item-sub:hover > ul {
+		opacity: 1;
+		visibility: visible;
+	}
+	.nav__list-sub > .nav__item {
+		padding: 20px;
+		border-radius: 20px;
+	}
+	.nav__list-sub > .nav__item:hover {
+		background-color: #eceef2;
+		& > .nav__link {
+			color: $c-txt;
+		}
+	}
+}
+
+// Подменю в шапке
+@include r(lg) {
+	.nav-mob-only {
+		display: none;
+	}
+	.nav__list-sub {
+		display: grid;
+		padding: 20px;
+		border-radius: 20px;
+	}
+	.nav-mega--3 {
+		width: 75vw;
+		max-width: 920px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.nav-mega {
+		.service-card {
+			background-color: transparent;
+			&__ico {
+				font-size: 32px;
+				margin-bottom: 22px;
+				background-color: #e1e5f1;
+			}
+			&__title {
+				font-size: 18px;
+				margin-top: 0;
+				color: $c-txt;
+			}
+			&__txt {
+				font: 14px $f-txt;
+				margin-top: 0.75em;
+				color: $c-txt;
+			}
+		}
 	}
 }
 
@@ -42,6 +119,9 @@
 	padding: 10px;
 	display: inline-block;
 	cursor: pointer;
+	@include r(1024) {
+		display: none;
+	}
 	&__el {
 		position: relative;
 		display: block;
@@ -65,7 +145,7 @@
 			transform: translateY(4px);
 		}
 	}
-	&.is-open {
+	&.toggle-open {
 		.burger__el {
 			background-color: transparent;
 			&:before {
