@@ -1,5 +1,5 @@
 $breakpoints: (
-	"xs": 360px,
+	"xs": 460px,
 	"sm": 540px,
 	"md": 767px,
 	"lg": 992px,
@@ -14,6 +14,12 @@ $f-color: #555;
 
 $l-g: 15px;
 $lg: 2.25rem;
+
+@include rmax(md) {
+	html {
+		font-size: 14px;
+	}
+}
 
 $c-main: #6682d4;
 $c-sec: #8ba434;

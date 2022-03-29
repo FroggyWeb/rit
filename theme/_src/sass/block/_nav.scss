@@ -113,6 +113,9 @@
 			}
 		}
 	}
+	.nav-banner {
+		grid-column: span 3;
+	}
 }
 
 .burger {
@@ -158,9 +161,36 @@
 	}
 }
 
+.nav-banner a {
+	color: $c-txt;
+	text-decoration: none;
+}
+
 .nav-desktop-only {
 	@include rmax(lg) {
 		display: none !important;
+	}
+}
+
+.hc-offcanvas-nav li.nav-parent .nav-item-link:last-child {
+	padding: 20px;
+}
+
+.hc-offcanvas-nav {
+	.service-card {
+		display: flex !important;
+		align-items: center;
+		flex-direction: row;
+		gap: 20px;
+	}
+	.service-card__ico {
+		font-size: 20px;
+	}
+
+	.service-card__cnt,
+	.service-card__title {
+		margin-top: 0;
+		font-size: 16px;
 	}
 }
 
