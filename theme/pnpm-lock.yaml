@@ -7,6 +7,7 @@ specifiers:
   babel-loader: ^8.2.4
   browser-sync: ^2.27.9
   cssnano: ^5.1.5
+  dragscroll: ^0.0.8
   gulp: ^4.0.2
   gulp-cheerio: ^1.0.0
   gulp-if: ^3.0.0
@@ -32,6 +33,7 @@ specifiers:
   webpack-stream: ^7.0.0
 
 dependencies:
+  dragscroll: 0.0.8
   hc-offcanvas-nav: 6.1.5
   swiper: 8.0.7
 
@@ -3035,6 +3037,10 @@ packages:
     dependencies:
       no-case: 2.3.2
     dev: true
+
+  /dragscroll/0.0.8:
+    resolution: {integrity: sha1-3kdx5fOhTXe1g+zvXTi9lhjydWM=}
+    dev: false
 
   /duplexify/3.7.1:
     resolution: {integrity: sha512-07z8uv2wMyS51kKhD1KsdXJg5WQ6t93RneqRxUHnskXVtlYYkLqM0gqStQZ3pj073g687jPCHrqNfCzawLYh5g==}

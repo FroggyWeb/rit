@@ -13,8 +13,6 @@ body {
 	min-width: 0;
 }
 
-// *
-//   outline: 1px solid green
 a {
 	transition: all 0.3s;
 }
@@ -25,6 +23,7 @@ p:first-child {
 
 .page {
 	flex: 1 0;
+	overflow: hidden;
 }
 
 .container,
@@ -93,14 +92,17 @@ a[href*="tel"] {
 	margin: $lg 0 2 * $lg 0;
 	&__contacts {
 		display: flex;
+		margin-left: auto;
 		&--addr {
 			@include rmax(lg) {
 				display: none;
 			}
 		}
 	}
-	.contact:not(:first-child) {
-		margin-left: $lg;
+	.contact:not(:last-child) {
+		@include r(lg) {
+			margin-right: $lg;
+		}
 	}
 }
 
@@ -111,6 +113,9 @@ a[href*="tel"] {
 	line-height: 1.2;
 	text-decoration: none;
 	transition: all 0.3s;
+	@include rmax(xs) {
+		flex: 0 0 180px;
+	}
 	span {
 		display: block;
 	}
@@ -125,6 +130,10 @@ a[href*="tel"] {
 	&--bg {
 		@include adaptiv("padding", 100, 15, 1);
 		background-color: $c-light;
+		@include rmax(xl) {
+			margin-left: -$lg;
+			margin-right: -$lg;
+		}
 	}
 	&--dark {
 		background-color: $c-main;
@@ -236,7 +245,12 @@ a[href*="tel"] {
 .article-list {
 	display: grid;
 	gap: $lg;
-	grid-template-columns: repeat(4, 1fr);
+	@include r(md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include r(lg) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 .religions {
@@ -245,7 +259,9 @@ a[href*="tel"] {
 .religions-list {
 	display: grid;
 	gap: $lg;
-	grid-template-columns: repeat(2, 1fr);
+	@include r(md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .footer-about {
@@ -258,10 +274,20 @@ a[href*="tel"] {
 		display: flex;
 		gap: $lg;
 		margin-left: auto;
+		@include rmax(md) {
+			.btn {
+				display: none;
+			}
+		}
 	}
 	&__copy {
 		@include rmax(lg) {
 			display: none;
+		}
+	}
+	&__logo {
+		@include rmax(xs) {
+			flex: 0 0 60px;
 		}
 	}
 }

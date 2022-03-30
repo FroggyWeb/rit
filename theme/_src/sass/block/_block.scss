@@ -9,7 +9,9 @@
 
 	&__ico {
 		font-size: 26px;
-		margin-right: 0.5em;
+	}
+	&__cnt {
+		margin-left: 0.5em;
 	}
 	&__pre {
 		font-size: 14px;
@@ -17,6 +19,20 @@
 	&__txt {
 		font-weight: 500;
 		font-size: 18px;
+	}
+}
+
+.header__contacts--tel {
+	@include rmax(sm) {
+		margin-left: auto;
+		.contact__ico {
+			background-color: $c-main;
+			color: #fff;
+			font-size: 28px;
+		}
+		.contact__cnt {
+			display: none;
+		}
 	}
 }
 

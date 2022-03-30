@@ -1,5 +1,5 @@
 $breakpoints: (
-	"xs": 460px,
+	"xs": 480px,
 	"sm": 540px,
 	"md": 767px,
 	"lg": 992px,
@@ -13,11 +13,11 @@ $f-txt: "Jost", sans-serif;
 $f-color: #555;
 
 $l-g: 15px;
-$lg: 2.25rem;
+$lg: 2rem;
 
 @include rmax(md) {
 	html {
-		font-size: 14px;
+		font-size: 10px;
 	}
 }
 
