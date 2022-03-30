@@ -3,13 +3,13 @@
 	gap: $lg;
 	background: url("@/img/bg/bg_benefits.png") no-repeat center center;
 	@include r(xl) {
-		gap: 2 * $lg;
+		gap: calc(2 * $lg);
 		grid-template-columns: 33% 1fr;
 		background-position: 100% 0;
 	}
 	&__cnt {
 		@include r(xl) {
-			padding: 2 * $lg 0;
+			padding: calc(2 * $lg) 0;
 		}
 	}
 	&__img {
@@ -24,7 +24,7 @@
 	gap: $lg;
 	@include r(md) {
 		grid-template-columns: repeat(2, 1fr);
-		margin-top: 2 * $lg;
+		margin-top: calc(2 * $lg);
 		gap: 80px 100px;
 	}
 }

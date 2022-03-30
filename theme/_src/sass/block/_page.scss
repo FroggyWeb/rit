@@ -89,7 +89,8 @@ a[href*="tel"] {
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 0;
-	margin: $lg 0 2 * $lg 0;
+	margin: $lg 0 calc(2 * $lg) 0;
+
 	&__contacts {
 		display: flex;
 		margin-left: auto;
@@ -131,8 +132,8 @@ a[href*="tel"] {
 		@include adaptiv("padding", 100, 15, 1);
 		background-color: $c-light;
 		@include rmax(xl) {
-			margin-left: -$lg;
-			margin-right: -$lg;
+			margin-left: -15px;
+			margin-right: -15px;
 		}
 	}
 	&--dark {
@@ -156,6 +157,10 @@ a[href*="tel"] {
 	// margin-bottom: ;
 	@include rmax(md) {
 		font-size: 24px;
+		margin-bottom: $lg;
+		&__cnt {
+			display: none;
+		}
 	}
 	&--long {
 		max-width: 900px;
@@ -187,7 +192,7 @@ a[href*="tel"] {
 .title-link {
 	display: flex;
 	align-items: flex-end;
-	margin-bottom: 2 * $lg;
+	margin-bottom: calc(2 * $lg);
 }
 
 .more {
@@ -295,7 +300,7 @@ a[href*="tel"] {
 .footer-link {
 	padding: $lg 0;
 	@include r(lg) {
-		padding: 2 * $lg 0 3 * $lg;
+		padding: calc(2 * $lg) 0 calc(3 * $lg);
 		display: flex;
 		gap: $lg;
 	}

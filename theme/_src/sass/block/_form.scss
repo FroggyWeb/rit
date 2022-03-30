@@ -27,7 +27,7 @@ textarea:focus {
 
 .form-line {
 	position: relative;
-	margin-bottom: 0.75 * $lg;
+	margin-bottom: calc(0.75 * $lg);
 	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
 		width: 100%;
 	}
@@ -81,17 +81,25 @@ textarea:focus {
 		cursor: pointer;
 		box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
 	}
+
 	&--title {
 		font-size: 16px;
 		font-weight: 400;
 		color: $c-main;
 		padding: 0.5em 1.5em;
-		margin: 0 0 50px;
+		margin: 0 0 20px;
+		@include r(sm) {
+			margin: 0 0 50px;
+		}
 	}
 
 	&--big {
-		padding: 1.5em 3em;
+		padding: 1em 2em;
+		@include r(xs) {
+			padding: 1.5em 3em;
+		}
 	}
+
 	&--dark {
 		background-color: $c-main;
 		color: #fff;

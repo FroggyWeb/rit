@@ -1,15 +1,8 @@
 .service-cards {
-	margin-top: 2 * $lg;
 	display: grid;
 	gap: $lg;
-	@include r(xxl) {
-		grid-template-columns: repeat(4, 1fr);
-		&--index .service-card:nth-child(3),
-		&--index .service-card:nth-child(4) {
-			grid-column: span 2;
-		}
-	}
 }
+
 .service-card {
 	display: flex;
 	flex-direction: column;
@@ -79,12 +72,35 @@
 		font-family: $f-title;
 		font-size: 22px;
 		font-weight: 400;
+		@include rmax(sm) {
+			font-size: 18px;
+		}
 	}
 	&__txt {
 		margin: 1em 0 0;
+		@include rmax(sm) {
+			display: none;
+		}
 	}
 	&__footer {
 		margin-top: 1em;
+	}
+}
+
+.service-cards--index {
+	margin-top: $lg;
+	@include r(sm) {
+		margin-top: calc(2 * $lg);
+	}
+	@include r(xs) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include r(xxl) {
+		grid-template-columns: repeat(4, 1fr);
+		.service-card:nth-child(3),
+		.service-card:nth-child(4) {
+			grid-column: span 2;
+		}
 	}
 }
 

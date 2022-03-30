@@ -230,7 +230,7 @@
 }
 
 .nav-catalog {
-	margin: 2 * $lg 0 0;
+	margin: calc(2 * $lg) 0 0;
 	padding: 0;
 	display: flex;
 	list-style: none;
@@ -242,7 +242,7 @@
 	}
 
 	&__item {
-		flex: 1 0 auto;
+		flex: 0 0 auto;
 		&:not(:first-child) {
 			margin-left: 2em;
 		}
