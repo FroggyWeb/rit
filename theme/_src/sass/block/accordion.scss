@@ -5,11 +5,11 @@
 	width: 26px;
 	height: 26px;
 	position: relative;
-	pointer-events: none;
 	cursor: pointer;
 	position: absolute;
-	top: 0;
+	top: 50%;
 	right: 0;
+  transform: translateY(-50%);
 }
 
 .marker::before,
@@ -21,19 +21,25 @@
 	background: $c-txt;
 	position: absolute;
 	pointer-events: all;
+  transition: all .3s;
 }
 
 .marker::after {
 	transform: rotate(90deg);
 }
 
-.ac-panel {
+.a-item.active .marker::after {
+  transform: rotate(0deg);
+}
+
+.a-panel {
   overflow: hidden;
-  height: 0;
-  visibility: hidden;
-  transition-property: height,
-  visibility;
-  transition-timing-function: ease;
+  max-height: 0;
+  transition: all .25s ease-in-out;
+}
+
+.a-item.active .a-panel {
+  max-height: 500px;
 }
 
 .faq-list {
@@ -80,4 +86,30 @@
 			}
 		}
 	}
+}
+
+.footer-nav__link.a-btn .marker {
+  display: none;
+}
+
+@include rmax(xs) {
+  .footer-nav {
+    gap: 0;
+    .footer-nav__item:first-child {
+      margin-top: 10px;
+    }
+  }
+  .footer-nav__title {
+    padding: 1.5em 0;
+    border-top: 1px solid $c-light;
+  }
+  .footer-nav__link.a-btn {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    padding-right: 30px;
+    .marker {
+      display: flex;
+    }
+  }
 }

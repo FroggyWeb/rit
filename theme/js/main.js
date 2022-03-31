@@ -8,10 +8,37 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(105);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(106);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(accordion_js__WEBPACK_IMPORTED_MODULE_1__);
 
 
+function initAcc(elem, option, media) {
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest(elem + ' .a-btn')) {
+      return;
+    }
+
+    ;
+    if (media && !window.matchMedia(`(max-width: ${media})`).matches) return;else {
+      e.preventDefault();
+      const panel = e.target.closest('.a-item');
+
+      if (!panel.classList.contains('active')) {
+        if (option == true) {
+          var elementList = document.querySelectorAll(elem + ' > .a-item');
+          Array.prototype.forEach.call(elementList, function (e) {
+            e.classList.remove('active');
+          });
+        }
+
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    }
+  });
+}
+
+initAcc('.faq-list', true);
+initAcc('.footer-nav', true);
 document.addEventListener('DOMContentLoaded', function () {
   var Nav = new (hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default())('#main-nav', {
     disableAt: 1024,
@@ -19,8 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navTitle: 'All Categories',
     levelTitles: true,
     levelTitleAsBack: true
-  });
-  const faqList = new (accordion_js__WEBPACK_IMPORTED_MODULE_1___default())('.faq-list');
+  }); //  const faqList =  new BadgerAccordion('.js-badger-accordion');
 });
 
 /***/ }),
