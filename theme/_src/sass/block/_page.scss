@@ -196,6 +196,9 @@ a[href*="tel"] {
 	display: flex;
 	align-items: flex-end;
 	margin-bottom: calc(2 * $lg);
+  .title-section {
+    margin-bottom: 0;
+  }
 }
 
 .more {
@@ -205,6 +208,9 @@ a[href*="tel"] {
 	&--desktop {
 		margin-left: auto;
 		margin-bottom: 0.25em;
+    @include rmax(md) {
+      display: none;
+    }
 	}
 }
 
@@ -328,7 +334,7 @@ a[href*="tel"] {
 	padding: 0;
 	list-style: none;
 	display: grid;
-	gap: $lg;
+	gap: calc(2*$lg);
 	@include r(xs) {
 		grid-template-columns: repeat(2, 1fr);
 	}

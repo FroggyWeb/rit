@@ -2,8 +2,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 26px;
-	height: 26px;
+	width: 16px;
+	height: 16px;
 	position: relative;
 	cursor: pointer;
 	position: absolute;
@@ -16,8 +16,8 @@
 .marker::after {
 	content: "";
 	display: block;
-	width: 26px;
-	height: 1px;
+	width: 16px;
+	height: 2px;
 	background: $c-txt;
 	position: absolute;
 	pointer-events: all;
@@ -48,7 +48,7 @@
 		border: 1px solid $c-light;
 		margin-top: -1px;
 		transition: all 0.3s;
-		&[open] {
+		&.active {
 			background-color: $c-light;
 		}
 	}
@@ -107,9 +107,15 @@
     display: block;
     position: relative;
     margin-bottom: 0;
-    padding-right: 30px;
+    padding-right: 20px;
     .marker {
       display: flex;
     }
+  }
+}
+
+@include r(xs) {
+  .footer-nav__list.a-panel{
+    max-height: none;
   }
 }
