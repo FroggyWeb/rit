@@ -62,6 +62,9 @@
 		font-size: 40px;
 		padding: 1em;
 		transition: all 0.3s;
+		@include rmax(sm) {
+			font-size: 32px;
+		}
 	}
 	&__cnt {
 		margin-top: auto;
@@ -138,7 +141,13 @@
 	&--religions {
 		.cart-img__title {
 			font-size: 32px;
+      @include rmax(sm) {
+        font-size: 22px;
+      }
 		}
+    .cart-img__desc {
+      display: block;
+    }
 	}
 	&__img {
 		position: absolute;
@@ -159,6 +168,11 @@
 		color: $c-txt;
 		transition: all 0.3s;
 		margin-bottom: $lg;
+		@include rmax(sm) {
+			font-size: 22px;
+			width: 60px;
+			height: 60px;
+		}
 		.arrow-left {
 			position: absolute;
 			top: 50%;
@@ -184,9 +198,15 @@
 	}
 	&__desc {
 		margin: 1em 0 0;
+		@include rmax(sm) {
+			display: none;
+		}
 	}
 	&__title {
-		font: 400 22px $f-title;
+		font: 400 22px/1.2 $f-title;
+		@include rmax(sm) {
+			font-size: 22px;
+		}
 	}
 }
 

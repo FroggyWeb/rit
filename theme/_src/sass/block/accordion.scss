@@ -1,12 +1,3 @@
-summary {
-	display: block;
-}
-
-summary::-webkit-details-marker,
-summary::marker {
-	display: none;
-}
-
 .marker {
 	display: flex;
 	justify-content: center;
@@ -26,7 +17,7 @@ summary::marker {
 	content: "";
 	display: block;
 	width: 26px;
-	height: 2px;
+	height: 1px;
 	background: $c-txt;
 	position: absolute;
 	pointer-events: all;
@@ -34,6 +25,15 @@ summary::marker {
 
 .marker::after {
 	transform: rotate(90deg);
+}
+
+.ac-panel {
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  transition-property: height,
+  visibility;
+  transition-timing-function: ease;
 }
 
 .faq-list {
@@ -49,9 +49,12 @@ summary::marker {
 	&__q {
 		position: relative;
 		font-weight: 500;
-		font-size: 22px;
+		font-size: 16px;
 		padding-right: calc(2 * $lg);
 		cursor: pointer;
+    @include r(md) {
+      font-size: 22px;
+    }
 	}
 	&__a {
 		margin-top: $lg;

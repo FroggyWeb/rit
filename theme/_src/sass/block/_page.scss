@@ -148,20 +148,23 @@ a[href*="tel"] {
 }
 
 .title-section {
-	margin: 0;
+	margin: 0 0 $lg;
 	font-size: 40px;
 	font-family: $f-title;
 	line-height: 1.2;
 	font-weight: 400;
 	max-width: 650px;
 	// margin-bottom: ;
-	@include rmax(md) {
-		font-size: 24px;
-		margin-bottom: $lg;
+	@include rmax(sm) {
+		font-size: 28px;
 		&__cnt {
 			display: none;
 		}
 	}
+	@include rmax(xs) {
+		font-size: 24px;
+	}
+
 	&--long {
 		max-width: 900px;
 	}
@@ -211,8 +214,12 @@ a[href*="tel"] {
 .tarif-list {
 	display: grid;
 	gap: $lg;
+	grid-template-columns: repeat(2, 1fr);
 	@include r(lg) {
 		grid-template-columns: repeat(4, 1fr);
+	}
+	.service-card__txt {
+		display: block;
 	}
 }
 

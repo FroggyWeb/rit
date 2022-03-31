@@ -8,6 +8,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(105);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(106);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(accordion_js__WEBPACK_IMPORTED_MODULE_1__);
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var Nav = new (hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default())('#main-nav', {
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     levelTitles: true,
     levelTitleAsBack: true
   });
+  const faqList = new (accordion_js__WEBPACK_IMPORTED_MODULE_1___default())('.faq-list');
 });
 
 /***/ }),

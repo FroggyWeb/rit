@@ -37,6 +37,7 @@
 }
 
 .section-intro {
+	margin-bottom: $lg;
 	@include r("md") {
 		display: grid;
 		gap: calc(0.5 * $lg) $lg;

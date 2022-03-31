@@ -1,4 +1,5 @@
 import hcOffcanvasNav from 'hc-offcanvas-nav';
+import Accordion from 'accordion-js';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -9,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     levelTitles: true,
     levelTitleAsBack: true
   });
+
+   const faqList = new Accordion('.faq-list');
 
 });
 

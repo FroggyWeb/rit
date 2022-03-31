@@ -40,7 +40,7 @@
 	.nav > .nav__list > .nav__item > .nav__link {
 		padding: 25px clamp(0.75em, 1vw, 2em);
 	}
-	.nav__item-sub > ul {
+  .nav > .nav__list > .nav__item-sub > ul {
 		padding: 20px;
 		position: absolute;
 		left: -50px;
@@ -50,6 +50,7 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: all 0.3s 0.3s;
+    min-width: 280px;
 		&:before {
 			content: "";
 			width: 30px;
@@ -62,7 +63,7 @@
 			background-color: #fff;
 		}
 	}
-	.nav__item-sub:hover > ul {
+  .nav > .nav__list > .nav__item-sub:hover > ul {
 		opacity: 1;
 		visibility: visible;
 	}
@@ -76,6 +77,21 @@
 			color: $c-txt;
 		}
 	}
+  // третий уровень
+  .nav>.nav__list>.nav__item-sub>ul>li {
+    a {font-size: 18px;}
+    ul {
+      margin-top: .5em;
+    }
+    ul>li>a {
+      font: 400 14px "Jost", serif;
+      color: #9BA1B3;
+      &:hover {
+        color: $c-txt;
+      }
+    }
+
+  }
 }
 
 // Подменю в шапке
@@ -89,11 +105,14 @@
 		border-radius: 20px;
 	}
 	.nav-mega--3 {
-		width: 75vw;
-		max-width: 920px;
 		grid-template-columns: repeat(3, 1fr);
 	}
+	.nav-mega--4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.nav-mega {
+    width: 75vw;
+    max-width: 920px;
 		.service-card {
 			background-color: transparent;
 			&__ico {
