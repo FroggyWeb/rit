@@ -5,7 +5,6 @@ specifiers:
   '@babel/preset-env': ^7.16.11
   autoprefixer: ^10.4.4
   babel-loader: ^8.2.4
-  badger-accordion: ^1.2.4
   browser-sync: ^2.27.9
   cssnano: ^5.1.5
   gulp: ^4.0.2
@@ -33,7 +32,6 @@ specifiers:
   webpack-stream: ^7.0.0
 
 dependencies:
-  badger-accordion: 1.2.4
   hc-offcanvas-nav: 6.1.5
   swiper: 8.0.7
 
@@ -1936,11 +1934,6 @@ packages:
   /backo2/1.0.2:
     resolution: {integrity: sha1-MasayLEpNjRj41s+u2n038+6eUc=}
     dev: true
-
-  /badger-accordion/1.2.4:
-    resolution: {integrity: sha512-bWiUY6Y66Ghc7Wxg1lELIGQtB2+G/2qXDoO5k86wBYb56qV8CpQ9J9IeslZgU3bu+1unJ1BOscRX1bltV65HuA==}
-    engines: {npm: '>=6.0.0'}
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}

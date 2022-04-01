@@ -362,3 +362,95 @@ a[href*="tel"] {
 		}
 	}
 }
+
+
+
+.breadcrumbs {
+  margin: 0 0 $lg;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  font-size: 14px;
+  color: $c-ltxt;
+  &__item {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: $c-light;
+    &:first-child {
+      border-radius: 50px 0px 0px 50px;
+    }
+    &:last-child {
+      border-radius: 0px 50px 50px 0px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.article {
+  P {
+    margin-top: 0;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: calc(2* $lg);
+    }
+  }
+
+  &__item-cnt {
+    columns: 2;
+    column-gap: calc(2 * $lg);
+
+    hr {
+      display: block;
+      height: 0;
+      border: none;
+      break-after: column;
+    }
+  }
+}
+
+.article ul {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.5em;
+    margin: .5em 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      left: 0;
+      top: 0.1em;
+      background: url("@/img/bullet.svg") no-repeat center /contain;
+    }
+  }
+}
+
+.button-article-more {display:none}
+
+.article--limited {
+  position: relative;
+  max-height: 1100px;
+  overflow: hidden;
+
+  .button-article-more {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+
