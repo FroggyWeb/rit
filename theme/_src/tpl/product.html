@@ -1,0 +1,181 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Ритуальные товары</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Гробы</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link">Гроб обитый тканью Новый</span>
+    </li>
+  </ul>
+  <h1 class="title-section">Гроб обитый тканью Новый</h1>
+  <div class="product section">
+    <div class="product__status">
+      <div class="btn btn--title">В наличии</div>
+      <div class="rating" data-rating="5">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="product__vendor light-txt">Артикул: У21Ч</div>
+    </div>
+    <div class="product-card">
+      <div class="product-card__img">
+        <div class="product-slider-thumb">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="@/img/content/preview_image_01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="@/img/content/preview_image_02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="@/img/content/preview_image_02.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="product-slider-main swiper">
+          <div class="ico ico--round slider-zoom">
+            {{ macro.iconSvg('search') }}
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="@/img/content/product_01_full.jpg" data-fancybox="gallery">
+                <img src="@/img/content/product_01_full.jpg" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="@/img/content/product_02_full.jpg" data-fancybox="gallery">
+                <img src="@/img/content/product_02_full.jpg" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="@/img/content/product_02_full.jpg" data-fancybox="gallery">
+                <img src="@/img/content/product_02_full.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card__cnt">
+        <p class="product-card__desc">Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки. Подходит для похорон людей любых конфессий.</p>
+        <a href="#" class="product-card__terms">Подробнее о доставке и оплате</a>
+        <div class="product-card__cost">
+          <div class="product-card__price">от 14 000 ₽</div>
+          <div class="product-card__price-info tooltip" data-tooltip="Конечная стоимость товара зависит от региона заказа" data-position="right top">?
+          </div>
+        </div>
+        <div class="btn-wrap product-card__btn">
+          <a href="#" class="btn btn--long btn--dark">Заказать товар</a>
+          <a href="#" class="btn btn--long btn--icon">
+            {{ macro.iconSvg('phone') }}
+            8 (800) 923-33-33</a>
+        </div>
+        <div class="spec product-card__spec">
+          <div class="spec__title">Характеристики</div>
+          <ul class="spec__list">
+            <li class="spec__item"> Размер
+              <span>Длина - 1970 мм, ширина - 480 мм</span>
+            </li>
+            <li class="spec__item"> Материал
+              <span>Фанера</span>
+            </li>
+            <li class="spec__item"> Покрытие
+              <span>Глянцевое</span>
+            </li>
+            <li class="spec__item"> Внутренняя обивка
+              <span>х/б</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title-link">
+      <h2 class="title-section">Возможно вам потребуется</h2>
+      <a href="#" class="more more--desktop">Посмотреть все товары</a>
+    </div>
+    <div class="catalog-mini__cards">
+      <a href="#" class="card">
+        <div class="card__img">
+          <img src="@/img/content/item 1-1.jpg" alt="">
+        </div>
+        <div class="rating card__rating" data-rating="4">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h3 class="card__title">Гроб Саркофаг глянец</h3>
+        <p class="card__desc">Качественный гроб отечественного производства из первоклассного соснового массива. Глянцевое
+          покрытие...</p>
+        <div class="price card__price">от 49 500 ₽</div>
+      </a>
+
+      <a href="#" class="card">
+        <div class="card__img">
+          <img src="@/img/content/item 1-2.jpg" alt="">
+        </div>
+        <div class="rating card__rating" data-rating="5">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h3 class="card__title">Гроб Новый</h3>
+        <p class="card__desc">Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты,
+          изготовленной...</p>
+        <div class="price card__price">от 14 000 ₽</div>
+      </a>
+
+      <a href="#" class="card">
+        <div class="card__img">
+          <img src="@/img/content/item 1-3.jpg" alt="">
+        </div>
+        <div class="rating card__rating" data-rating="2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h3 class="card__title">Гроб Цинк</h3>
+        <p class="card__desc">Модель специально разработанная для транспортировки Груза 200. Выполнен из оцинкованной стали.
+          Соответствует...</p>
+        <div class="price card__price">от 35 500 ₽</div>
+      </a>
+
+      <a href="#" class="card">
+        <div class="card__img">
+          <img src="@/img/content/item 1-4.jpg" alt="">
+        </div>
+        <div class="rating card__rating" data-rating="3">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h3 class="card__title">Гроб Люкс</h3>
+        <p class="card__desc">Премиальный двухкрышечный гроб. Изготовлен из сосны высокой выдержки, выглядит престижно и
+          дорого...</p>
+        <div class="price card__price">от 170 000 ₽</div>
+      </a>
+    </div>
+  </div>
+  {% include "parthtml/form-call-dark.html" %}
+</div>
+
+{% endblock %}

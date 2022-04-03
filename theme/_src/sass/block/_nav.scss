@@ -17,6 +17,7 @@
 		display: block;
 		text-decoration: none;
 		color: $c-txt;
+    &:hover {color: $c-main}
 	}
 }
 
@@ -245,6 +246,9 @@
 		color: $c-txt;
 		font-weight: 500;
 		transition: color 0.2s;
+    &:hover {
+      color: $c-main;
+    }
 	}
 }
 

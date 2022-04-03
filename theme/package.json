@@ -39,7 +39,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.26",
     "hc-offcanvas-nav": "^6.1.5",
+    "nouislider": "^15.5.1",
     "swiper": "^8.0.7"
   }
 }

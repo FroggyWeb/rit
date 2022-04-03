@@ -1,0 +1,304 @@
+.noUi-horizontal {
+  height: 3px;
+}
+// .noUi-handle {
+//   border-radius: 50%;
+// }
+.noUi-connect {
+  background: $c-dark;
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+  content: none;
+}
+
+.noUi-target {
+  border: none;
+  box-shadow: none
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border: none;
+
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 22px;
+  height: 22px;
+  right: -11px;
+  top: -10px;
+  border-radius: 50%;
+}
+
+.range {
+  margin: 30px 0;
+}
+
+.catalog-filter {
+  max-width: 400px;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+}
+
+.filter {
+  &:not(:last-child) {
+    padding-bottom: $lg;
+  }
+  input {
+    color: #fff;
+    background-color: $c-dark;
+    font-weight: 500;
+    max-width: 100%;
+  }
+  &__input-wrap {
+    position: relative;
+  }
+  &__action {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+}
+
+.filter-price {
+  &__inputs {
+    display: flex;
+    gap: calc($lg/2);
+
+    label {
+      position: absolute;
+      left: 1em;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+
+    input {
+      padding-left: 3em;
+    }
+  }
+}
+
+.catalog-filter {
+  background-color: $c-main;
+  color: #fff;
+  padding: $lg;
+
+  &__reset {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.filter-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    margin-left: -1em;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    &.active {
+      border-color: $c-dark;
+      background: $c-dark;
+    }
+    &:hover {
+      border-color: $c-dark;
+    }
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: .5em 1em;
+  }
+}
+
+.article-wrap {
+  display: grid;
+  gap: $lg;
+  @include r(md) {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+.catalog-cards {
+  display: grid;
+  @include r(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalog-more {
+  border: 1px solid $c-light-b;
+  padding: .25em;
+  text-align: center;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+.product {
+  &__status {
+    border-bottom: 1px solid $c-light-b;
+    margin-bottom: $lg;
+    padding-bottom: $lg;
+    display: flex;
+    align-items: center;
+    gap: $lg;
+    .btn--title {
+      margin: 0;
+    }
+  }
+  &__vendor {
+    margin-left: auto;
+    @include rmax(xs) {
+      font-size: 12px;
+    }
+  }
+}
+
+.product-card {
+  display: grid;
+  gap: $lg;
+  align-items: start;
+  @include r(lg) {
+    grid-template-columns: 1fr 550px;
+  }
+  @include r(lg) {
+    grid-template-columns: 1fr 550px;
+  }
+  &__img {
+    display: flex;
+    gap: $lg;
+    flex-direction: column-reverse;
+    @include r(xxl) {
+      flex-direction: row;
+      .product-slider-thumb {
+        flex: 0 0 200px;
+      }
+    }
+    .swiper-slide {
+      border: 1px solid $c-light-b;
+    }
+  }
+
+  &__cnt {}
+
+  &__desc {}
+
+  &__terms {
+    font-weight: 500;
+    text-decoration: none;
+    color: $c-txt;
+    &:hover {
+      color: $c-main;
+    }
+  }
+
+  &__cost {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $lg;
+  }
+
+  &__price {
+    font-size: 32px;
+    font-family: $f-title;
+  }
+
+  &__price-info {}
+
+  &__btn {
+    margin-top: $lg;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    @include r(sm) {
+      flex-direction: row;
+    }
+    .btn {
+      height: 50px;
+    }
+    .btn .phone {
+      color: $c-main;
+      margin-right: .5em;
+      font-size: 24px;
+    }
+  }
+  &__spec {
+    margin-top: calc(2*$lg);
+  }
+}
+
+.spec {
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 1em;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    align-items: baseline;
+    &:not(:last-child) {
+      margin: 0 0 1em;
+    }
+    &::before {
+      content: '';
+      border-bottom: 1px dotted;
+      flex-grow: 1;
+      order: 2;
+      margin: 0 5px;
+      order: 2;
+    }
+    span {
+      order: 3;
+    }
+  }
+}
+
+
+.product-slider-thumb {
+  max-height: 500px;
+}
+
+.product-slider-main {
+  position: relative;
+}
+
+.slider-zoom {
+  font-size: 24px;
+  position: absolute;
+  left: $lg;
+  top: $lg;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.b-tooltip {
+  border: 3px solid #fff;
+  display: inline-block;
+  font-size: .875em;
+  padding: .75em;
+  position: absolute;
+  text-align: center;
+}
+

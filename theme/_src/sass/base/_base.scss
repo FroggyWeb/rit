@@ -29,11 +29,6 @@ img {
 
 a {
 	color: $c-link;
-	@include r(lg) {
-		&:hover {
-			color: $c-active;
-		}
-	}
 }
 
 a:not([class]) {

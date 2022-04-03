@@ -257,9 +257,6 @@
 	&__rating {
 		font-size: 18px;
 		margin-bottom: 32px;
-		span {
-			background-image: url("@/img/star-blue.svg");
-		}
 	}
 	&__title {
 		font: 400 22px $f-title;
@@ -290,7 +287,5 @@
   }
 }
 
-.catalog-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
+
+

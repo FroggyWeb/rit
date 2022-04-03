@@ -372,9 +372,11 @@ a[href*="tel"] {
   line-height: 1;
   font-size: 14px;
   color: $c-ltxt;
+  display: flex;
   &__item {
-    display: inline-block;
+    flex: 0 0 auto;
     padding: 0.5em 1em;
+    margin-left: .25em;
     background-color: $c-light;
     &:first-child {
       border-radius: 50px 0px 0px 50px;
@@ -384,11 +386,88 @@ a[href*="tel"] {
     }
   }
 
+  a:hover {color: $c-main;}
+
   &__link {
     text-decoration: none;
     color: inherit;
+    @include rmax(xs) {
+      font-size: 12px;
+    }
   }
 }
 
+.swiper {
+  width: 100%;
+}
 
+.get-item-more {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: $c-main;
+  }
+  .iconsvg {
+    font-size: 2em;
+    margin-right: .1em;
+  }
+  &.loading {
+    .iconsvg {
+      animation: loading 1s infinite linear;
+    }
+  }
+}
 
+@keyframes loading {
+  0% {transform: rotate(0deg);}
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tooltip {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  background-color: $c-light;
+}
+
+.b-tooltip {
+  &:before {
+    content: "";
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+  }
+}
+
+.b-tooltip-light {
+  background: #fff;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .15));
+  color: #242424;
+  max-width: 300px;
+
+}
+
+.b-tooltip-dark {
+  background: #242424;
+  background: linear-gradient(to bottom, #6e6e6e 0%, #242424 100%);
+  box-shadow: 0px 0px 6px 2px rgba(110, 110, 110, 1);
+  color: #fff;
+}
+
+.fancybox__content img {
+  min-width: auto;
+}

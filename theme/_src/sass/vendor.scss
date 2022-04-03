@@ -1,2 +1,6 @@
-// @import "hc-offcanvas-nav/src/scss/hc-offcanvas-nav";
+@import "hc-offcanvas-nav/src/scss/core";
+// @import "hc-offcanvas-nav/src/scss/toggle";
+@import "hc-offcanvas-nav/src/scss/theme-default";
 @import "node_modules/swiper/swiper";
+@import "./vendor/nouislider";
+@import "node_modules/@fancyapps/ui/src/Fancybox/Fancybox";

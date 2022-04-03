@@ -85,12 +85,12 @@ textarea:focus {
 	overflow: hidden;
 	background: #e1e5f1;
 	border-radius: 50px;
-	text-align: center;
+	justify-content: center;
+  align-items: center;
 	&:not(.btn--title):hover {
 		cursor: pointer;
 		box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
 	}
-
 	&--title {
 		font-size: 16px;
 		font-weight: 400;
@@ -100,15 +100,22 @@ textarea:focus {
 		@include r(sm) {
 			margin: 0 0 50px;
 		}
+    @include rmax(xs) {
+      font-size: 12px;
+    }
 	}
-
+  &--long {
+    padding: 1em 3em;
+  }
 	&--big {
 		padding: 1em 2em;
 		@include r(xs) {
 			padding: 1.5em 3em;
 		}
 	}
-
+  &--icon{
+    height: 60px;
+  }
 	&--dark {
 		background-color: $c-main;
 		color: #fff;
