@@ -38,6 +38,9 @@
 
 .section-intro {
 	margin-bottom: $lg;
+  .title-section {
+    align-self: flex-start;
+  }
 	@include r("md") {
 		display: grid;
 		gap: calc(0.5 * $lg) $lg;

@@ -9,21 +9,20 @@
 	text-decoration: none;
 
 	&--service {
-		background-color: #fff;
 		padding: $lg;
 		color: inherit;
-		&:hover {
-			color: $c-txt;
-			.service-card__ico {
-				background-color: $c-main;
-				color: #fff;
-			}
-		}
 		.service-card__ico {
 			color: $c-main;
 			background-color: #e1e5f1;
 		}
 	}
+
+  a.service-card--service:hover {
+    .service-card__ico {
+      background-color: $c-main;
+      color: #fff;
+    }
+  }
 
 	&--tarif {
 		color: #fff;
@@ -92,6 +91,9 @@
 
 .service-cards--index {
 	margin-top: $lg;
+  .service-card {
+    background-color: #fff;
+  }
 	@include r(sm) {
 		margin-top: calc(2 * $lg);
 	}
@@ -105,6 +107,27 @@
 			grid-column: span 2;
 		}
 	}
+}
+
+.service-cards--inner {
+  .service-card {
+    border: 1px solid $c-light-b;
+    transition: all .3s;
+    &:hover {
+      border-color: $c-main;
+    }
+  }
+  display: grid;
+  gap: $lg;
+  @include r(xs) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include r(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include r(xxl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .cart-img {

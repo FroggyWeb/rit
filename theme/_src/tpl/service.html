@@ -1,0 +1,112 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="article-wrap section">
+      <div class="article-aside">
+        <form action="" class="form-call form form--aside form--dark form--center" name="formservice">
+          <div class="form__title">Заказать услугу</div>
+          <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее решение</p>
+          <div class="form-line">
+            <input type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-line">
+            <button type="submit" class="btn">Заказать услугу</button>
+          </div>
+          <p class="form__footer">Оставляя заявку, вы даете согласие на обработку персональных данных</p>
+        </form>
+      </div>
+      <main class="article-main">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Наши услуги</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">Организация похорон в СПБ</span>
+          </li>
+        </ul>
+
+        <h1 class="title-section">Организация похорон в СПБ</h1>
+
+        <div class="article-header">
+          <div class="author">
+            <div class="author__img">
+              <img src="@/img/content/author.jpg" alt="Александр Хваленко">
+            </div>
+            <div class="author__cnt">
+              <div class="light-txt">Автор материала</div>
+              <div class="author__name">Александр Хваленко</div>
+            </div>
+          </div>
+          <div class="article-header__data">
+            <span class="article-header__rubric light-txt">Услуги</span>
+            <span class="light-txt">3 минуты на чтение</span>
+          </div>
+        </div>
+
+        <div class="article-srv-card">
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round">
+              {{ macro.iconSvg('coffin-2') }}
+            </div>
+            <div class="service-card__cnt">
+              <h3 class="service-card__title">Похороны в СПБ</h3>
+              <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+                предпочтения</p>
+              <div class="service-card__footer light-txt">
+                <span class="service-card__footer-ico ico">
+                  {{ macro.iconSvg('info') }}
+                </span>
+                <span class="service-card__footer-txt">Для разных религий</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-gallery">
+          <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img src="@/img/content/gallery.jpg" alt=""></a>
+          <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img src="@/img/content/gallery.jpg" alt=""></a>
+          <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img src="@/img/content/gallery.jpg" alt=""></a>
+        </div>
+
+        <div class="article">
+          <h2>Что входит в услугу организации похорон?</h2>
+          <p>Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки.Подходит для похорон людей любых конфессий.</p>
+          <ul>
+            <li>Мы самостоятельно соберем все необходимые документы</li>
+            <li>Оформим требуемые услуги в морге и на кладбище</li>
+            <li>Предоставим ритуальные принадлежности и транспорт</li>
+            <li>Организуем прощание</li>
+            <li>Мы самостоятельно соберем все необходимые документы</li>
+          </ul>
+          <p>В этот непростой для вас период мы самостоятельно организуем погребение, без лишних временных и денежных трат.</p>
+          <h2>Как заказать организацию похорон?</h2>
+          <ol>
+            <li>В течение 15 минут мы перезвоним вам, чтобы согласовать встречу с ритуальным агентом компании</li>
+            <li>В течение 15 минут мы перезвоним вам, чтобы согласовать</li>
+            <li>В течение 15 минут мы перезвоним вам, чтобы согласовать встречу с ритуальным агентом компании</li>
+            <li>В течение 15 минут мы перезвоним вам, чтобы согласовать</li>
+            <li>В течение 15 минут мы перезвоним вам, чтобы согласовать</li>
+          </ol>
+          <h2>Как заказать организацию похорон?</h2>
+          <p>Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки. Подходит для похорон людей любых конфессий.</p>
+          <ul>
+            <li>Мы самостоятельно соберем все необходимые документы</li>
+            <li>Оформим требуемые услуги в морге и на кладбище</li>
+            <li>Предоставим ритуальные принадлежности и транспорт</li>
+          </ul>
+          <p>Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки.
+          Подходит для похорон людей любых <a href="#">конфессий</a>. Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и температурой. Каштановый цвет изделия покрыт глянцевым
+          лаком. Четыре классические ручки по бокам для транспортировки.</p>
+          <p>Подходит для похорон людей любых конфессий. Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением и
+          температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки.
+          Подходит для похорон людей любых конфессий.</p>
+        </div>
+
+      </main>
+    </div>
+<!-- end container -->
+</div>
+{% endblock %}
