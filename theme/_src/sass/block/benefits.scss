@@ -30,6 +30,23 @@
     }
 		gap: 80px 100px;
 	}
+  &--article {
+    grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+    gap: $lg;
+    margin-top: $lg !important;
+    @include r(lg) {
+      grid-template-columns: repeat(4, 1fr)
+    }
+    .benefit .benefit__title {
+      font: $f-base;
+      margin: 1em 0 0;
+      font-weight: 500;
+      font-size: 22px;
+      @include rmax(xxl) {
+        font-size: 16px;
+      }
+    }
+  }
 }
 .benefit {
 	&__ico {

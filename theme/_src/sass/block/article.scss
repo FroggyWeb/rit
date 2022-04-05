@@ -2,6 +2,46 @@
   P {
     margin-top: 0;
   }
+  h2,h3 {
+    font-family: $f-title;
+    font-size: 24px;
+    font-weight: 400;
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+    @include r(md) {
+      font-size: 32px;
+    }
+  }
+  ol {
+    counter-reset: list;
+    list-style-type: none;
+    padding: 0;
+    li {
+      position: relative;
+      counter-increment: list;
+      padding-left: 2.5em;
+      margin: 1em 0;
+      &:before {
+        content: counter(list);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        color: #fff;
+        background-color: $c-main;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+    }
+  }
+
+  &--limit {
+    max-width: 940px;
+  }
 
   &__item {
     &:not(:first-child) {
@@ -82,6 +122,9 @@
   display: flex;
   gap: 1em;
   align-items: center;
+  .ico--round {
+    font-size: 26px;
+  }
   @include rmax(340) {
     flex-direction: column;
   }
@@ -185,5 +228,29 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.cost-info {
+  padding: $lg;
+  background: $c-light url('@/img/bg/bg_benefits.png') no-repeat right top;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  &__title {
+    font-family: $f-title;
+    font-size: 22px;
+    line-height: 1.2;
+    max-width: 600px;
+    @include r(md) {
+      font-size: 32px;
+    }
+  }
+  &__footer {
+    font-weight: 500;
+  }
+  .ico--round {
+    background-color: $c-main;
+    color: #fff;
   }
 }
