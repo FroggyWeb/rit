@@ -254,3 +254,82 @@
     color: #fff;
   }
 }
+
+.article-img {
+  position: relative;
+  padding-top: calc(10*$lg);
+  margin-bottom: $lg;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, .4);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.article-toc {
+  padding: $lg;
+  background: $c-light url('@/img/bg/bg_benefits.png') no-repeat right top;
+  &__list {
+    @include r(md) {
+      columns: 350px 2;
+    }
+  }
+
+  &__item {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.article-religion-cards {
+  display: grid;
+  gap: $lg;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  &__item {
+    background-color: $c-light;
+    padding: $lg;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    font-size: 22px;
+    font-family: $f-title;
+    margin-bottom: 1em;
+  }
+
+  &__ico {}
+
+  &__cnt {
+    font-size: 18px;
+    padding-left: 1.5em;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      background: url('@/img/bullet.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+}

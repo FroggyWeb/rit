@@ -144,6 +144,11 @@ a[href*="tel"] {
 .title {
 	font-family: $f-title;
 	font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 1em;
+  @include rmax(md) {
+    font-size: 22px;
+  }
 }
 
 .title-section {
