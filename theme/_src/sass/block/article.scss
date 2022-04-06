@@ -333,3 +333,27 @@
     }
   }
 }
+
+.article-info {
+  background-color: $c-light;
+  margin: calc(2*$lg) 0;
+  padding: $lg;
+  font-size: 18px;
+  display: flex;
+  gap: $lg;
+  align-items: center;
+  @include rmax(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ico--round {
+    font-size: 72px;
+    margin-right: calc(.5 * $lg);
+    background-color: $c-light-b;
+  }
+  a {
+    color: $c-main;
+  }
+}
+
