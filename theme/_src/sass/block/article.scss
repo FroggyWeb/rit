@@ -357,3 +357,40 @@
   }
 }
 
+.ico {
+  &--round {}
+}
+
+.article-card {
+  padding: $lg;
+  border: 1px solid $c-light-b;
+  margin-top: calc(2*$lg);
+  display: flex;
+  position: relative;
+  gap: $lg;
+  align-items: center;
+  &__ico{
+    font-size: 64px;
+  }
+  &__cnt {}
+
+  &__title {}
+
+  &__txt {}
+
+  &__price {white-space: nowrap;}
+
+  &__price-info {}
+
+  &__price-price {
+
+  }
+  &__link {
+    display: block;
+    font-size: 28px;
+    background-color: $c-main;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+  }
+}
