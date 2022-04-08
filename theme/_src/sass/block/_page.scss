@@ -377,6 +377,11 @@ a[href*="tel"] {
   font-size: 14px;
   color: $c-ltxt;
   display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &__item {
     flex: 0 0 auto;
     padding: 0.5em 1em;

@@ -1,3 +1,15 @@
+.article-wrap {
+  display: grid;
+  gap: $lg;
+  @include r(xxl) {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+.mob-aside:not(:empty) {
+  margin-bottom: $lg;
+}
+
 .article {
   P {
     margin-top: 0;
@@ -372,25 +384,35 @@
   &__ico{
     font-size: 64px;
   }
-  &__cnt {}
+  &__cnt {
+    flex: 1 0;
+  }
 
-  &__title {}
+  &__title {
+    font-size: 22px;
+    font-family: $f-title;
+    margin-bottom: .5em;
+  }
 
   &__txt {}
 
-  &__price {white-space: nowrap;}
+  &__price {
+    white-space: nowrap;
+  }
 
   &__price-info {}
 
   &__price-price {
-
+    font-weight: 500;
+    font-size: 18px;
   }
   &__link {
-    display: block;
-    font-size: 28px;
-    background-color: $c-main;
+    @extend %ico-big;
     color: #fff;
-    width: 80px;
-    height: 80px;
+    background-color: $c-main;
+    &:hover {
+      color: $c-txt;
+      background-color: $c-light-b;
+    }
   }
 }

@@ -3,7 +3,7 @@
 <div class="container">
     <div class="article-wrap section">
       <div class="article-aside">
-        <form action="" class="form-call form form--aside form--dark form--center" name="formservice">
+        <form action="" class="form-call form form--aside form--dark form--center" name="formservice" data-da=".mob-aside,1400">
           <div class="form__title">Заказать услугу</div>
           <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее решение</p>
           <div class="form-line">
@@ -49,6 +49,8 @@
         <div class="article-img">
           <img src="@/img/content/article_image.jpg" alt="">
         </div>
+
+        <div class="mob-aside"></div>
 
         <div class="article-toc article">
           <div class="article-toc__title title">Содержание</div>
@@ -197,7 +199,7 @@
               <div class="article-card__price-info">Стоимость услуги</div>
               <div class="article-card__price-price">от 35 000 рублей.</div>
             </div>
-            <a href="" class="article-card__link ico ico--round">
+            <a href="" class="article-card__link">
               {{ macro.iconSvg('arrow-left') }}
             </a>
           </div>
@@ -206,8 +208,64 @@
       </main>
     </div>
 <!-- end container -->
-
-  {% include "parthtml/religions.html" %}
+  <div class="section">
+    <h2 class="btn btn--title">Другие матеариалы</h2>
+    <div class="title-link">
+      <div class="title-section">Рекомендуем также</div>
+      <a href="#" class="more more--desktop">Все статьи</a>
+    </div>
+    <!-- Копия с parthtml/articles.html -->
+    <div class="article-list">
+      <a href="#" class="cart-img cart-img--article">
+        <img class="cart-img__img" src="@/img/content/article_image_01.jpg" alt="">
+        <div class="cart-img__link">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+        <div class="cart-img__cnt">
+          <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+            <span class="cart-img__rubric">РАЗНОЕ</span>
+          </div>
+          <div class="cart-img__title">Можно ли заразиться коронавирусом от умершего человека?</div>
+        </div>
+      </a>
+      <a href="#" class="cart-img cart-img--article">
+        <img class="cart-img__img" src="@/img/content/article_image_02.jpg" alt="">
+        <div class="cart-img__link">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+        <div class="cart-img__cnt">
+          <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+            <span class="cart-img__rubric">РАЗНОЕ</span>
+          </div>
+          <div class="cart-img__title">Традиции и обычаи. Что можно и нельзя делать во время похорон</div>
+        </div>
+      </a>
+      <a href="#" class="cart-img cart-img--article">
+        <img class="cart-img__img" src="@/img/content/article_image_03.jpg" alt="">
+        <div class="cart-img__link">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+        <div class="cart-img__cnt">
+          <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+            <span class="cart-img__rubric">РАЗНОЕ</span>
+          </div>
+          <div class="cart-img__title">Как сообщить о смерти родным и близким?</div>
+        </div>
+      </a>
+      <a href="#" class="cart-img cart-img--article">
+        <img class="cart-img__img" src="@/img/content/article_image_04.jpg" alt="">
+        <div class="cart-img__link">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+        <div class="cart-img__cnt">
+          <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+            <span class="cart-img__rubric">РАЗНОЕ</span>
+          </div>
+          <div class="cart-img__title">Как самостоятельно организовать похороны</div>
+        </div>
+      </a>
+    </div>
+  </div>
   {% include "parthtml/form-call-dark.html" %}
 </div>
 

@@ -126,14 +126,6 @@
   }
 }
 
-.article-wrap {
-  display: grid;
-  gap: $lg;
-  @include r(md) {
-    grid-template-columns: 350px 1fr;
-  }
-}
-
 .catalog-cards {
   display: grid;
   @include r(lg) {
