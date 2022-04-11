@@ -190,6 +190,17 @@ a[href*="tel"] {
 			transform: translate(-50%, -50%);
 		}
 	}
+  &--round-big {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 auto;
+    @include r(md) {
+      font-size: 48px;
+      width: 90px;
+      height: 90px;
+    }
+  }
 }
 
 .light-txt {

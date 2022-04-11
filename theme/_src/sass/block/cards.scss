@@ -57,14 +57,6 @@
 		}
 	}
 
-	&__ico {
-		font-size: 40px;
-		padding: 1em;
-		transition: all 0.3s;
-		@include rmax(sm) {
-			font-size: 32px;
-		}
-	}
 	&__cnt {
 		margin-top: auto;
 		max-width: 500px;
@@ -182,8 +174,9 @@
 		z-index: -2;
 	}
 	&__link {
-		@extend %ico-big;
     margin-bottom: $lg;
+    color: $c-txt;
+    background-color: #fff;
 	}
 	&__data {
 		padding-right: 0.5em;

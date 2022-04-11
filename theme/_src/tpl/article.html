@@ -3,17 +3,19 @@
 <div class="container">
     <div class="article-wrap section">
       <div class="article-aside">
-        <form action="" class="form-call form form--aside form--dark form--center" name="formservice" data-da=".mob-aside,1400">
-          <div class="form__title">Заказать услугу</div>
-          <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее решение</p>
-          <div class="form-line">
-            <input type="tel" placeholder="+7 (___) ___-__-__">
-          </div>
-          <div class="form-line">
-            <button type="submit" class="btn">Заказать услугу</button>
-          </div>
-          <p class="form__footer">Оставляя заявку, вы даете согласие на обработку персональных данных</p>
-        </form>
+        <div class="form--dark form--center" data-da=".mob-aside,1400">
+          <form action="" class="form-call form form--aside" name="formservice">
+            <div class="form__title">Заказать услугу</div>
+            <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее решение</p>
+            <div class="form-line">
+              <input type="tel" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-line">
+              <button type="submit" class="btn">Заказать услугу</button>
+            </div>
+            <p class="form__footer">Оставляя заявку, вы даете согласие на обработку персональных данных</p>
+          </form>
+        </div>
       </div>
       <main class="article-main">
         <ul class="breadcrumbs">
@@ -98,7 +100,7 @@
           <p>Гербовое свидетельство выдается в ЗАГСе представителю усопшего. При этом Вам нужно предъявить свой собственный паспорт и паспорт умершего, а также медицинское свидетельство о смерти.</p>
 
           <div class="article-info">
-            <div class="ico ico--round">
+            <div class="ico ico--round  ico--round-big">
               {{ macro.iconSvg('rose') }}
             </div>
             <div class="article-info__cnt">В случае смерти близкого позвоните в ритуальное наше агентство <a href="tel:+78122107896">+7 (812) 210-78-96</a>. Специалисты компании проконсультируют
@@ -188,7 +190,7 @@
           церемонии прощания. Поминки можно организовать дома или арендовать зал в ближайшем кафе.</p>
 
           <div class="article-card">
-            <div class="article-card__ico ico ico--round">
+            <div class="article-card__ico ico ico--round ico--round-big">
               {{ macro.iconSvg('ashes') }}
             </div>
             <div class="article-card__cnt">
@@ -199,7 +201,7 @@
               <div class="article-card__price-info">Стоимость услуги</div>
               <div class="article-card__price-price">от 35 000 рублей.</div>
             </div>
-            <a href="" class="article-card__link">
+            <a href="" class="article-card__link ico ico--round ico--round-big">
               {{ macro.iconSvg('arrow-left') }}
             </a>
           </div>
@@ -218,7 +220,7 @@
     <div class="article-list">
       <a href="#" class="cart-img cart-img--article">
         <img class="cart-img__img" src="@/img/content/article_image_01.jpg" alt="">
-        <div class="cart-img__link">
+        <div class="cart-img__link ico ico--round ico--round-big">
           {{ macro.iconSvg('arrow-left') }}
         </div>
         <div class="cart-img__cnt">
@@ -230,7 +232,7 @@
       </a>
       <a href="#" class="cart-img cart-img--article">
         <img class="cart-img__img" src="@/img/content/article_image_02.jpg" alt="">
-        <div class="cart-img__link">
+        <div class="cart-img__link ico ico--round ico--round-big">
           {{ macro.iconSvg('arrow-left') }}
         </div>
         <div class="cart-img__cnt">
@@ -242,7 +244,7 @@
       </a>
       <a href="#" class="cart-img cart-img--article">
         <img class="cart-img__img" src="@/img/content/article_image_03.jpg" alt="">
-        <div class="cart-img__link">
+        <div class="cart-img__link ico ico--round ico--round-big">
           {{ macro.iconSvg('arrow-left') }}
         </div>
         <div class="cart-img__cnt">
@@ -254,7 +256,7 @@
       </a>
       <a href="#" class="cart-img cart-img--article">
         <img class="cart-img__img" src="@/img/content/article_image_04.jpg" alt="">
-        <div class="cart-img__link">
+        <div class="cart-img__link ico ico--round ico--round-big">
           {{ macro.iconSvg('arrow-left') }}
         </div>
         <div class="cart-img__cnt">

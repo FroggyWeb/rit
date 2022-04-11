@@ -360,7 +360,6 @@
   }
 
   .ico--round {
-    font-size: 72px;
     margin-right: calc(.5 * $lg);
     background-color: $c-light-b;
   }
@@ -369,9 +368,6 @@
   }
 }
 
-.ico {
-  &--round {}
-}
 
 .article-card {
   padding: $lg;
@@ -381,9 +377,6 @@
   position: relative;
   gap: $lg;
   align-items: center;
-  &__ico{
-    font-size: 64px;
-  }
   &__cnt {
     flex: 1 0;
   }
@@ -407,7 +400,6 @@
     font-size: 18px;
   }
   &__link {
-    @extend %ico-big;
     color: #fff;
     background-color: $c-main;
     &:hover {

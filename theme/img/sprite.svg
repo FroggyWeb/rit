@@ -70,8 +70,8 @@
 <clipPath id="clip0_576_12397">
 <rect width="46" height="46"/>
 </clipPath>
-</defs><symbol id="arrow-left" viewBox="0 0 29.5 12.3"><g style="enable-background:new 0 0 29.5 12.3;">
-<polygon points="22.8,12.3 21.5,10.8 25.4,7.4 0,7.4 0,5.4 25.5,5.4 21.4,1.5 22.8,0 28.7,5.7 29.5,6.4 28.7,7.1 "/>
+</defs><symbol id="arrow-left" viewBox="0 0 48 48"><g style="enable-background:new 0 0 48 48;">
+<polygon points="32,30.1 30.8,28.6 34.7,25.2 9.2,25.2 9.2,23.2 34.8,23.2 30.6,19.4 32,17.9 38,23.5 38.8,24.2 38,25 "/>
 </g></symbol><symbol id="clock" viewBox="0 0 24 24">
 <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z"/>
 <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"/>
