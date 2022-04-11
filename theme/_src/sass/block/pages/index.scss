@@ -21,3 +21,16 @@
 		margin-right: $lg;
 	}
 }
+
+.benefits-index{
+  &__cnt {
+    @include r(xl) {
+      padding: calc(2 * $lg) 0;
+    }
+  }
+  .benefits-list {
+    @include r(lg) {
+      gap: 80px 100px;
+    }
+  }
+}

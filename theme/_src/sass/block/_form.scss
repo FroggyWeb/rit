@@ -74,7 +74,7 @@ textarea:focus {
 	display: inline-flex;
 	flex: 0 0 auto;
 	font-weight: 500;
-	padding: 1em 1em 1em;
+	padding: 1em 2em;
 	text-decoration: none;
 	line-height: 1;
 	border-radius: 0.5em;
@@ -157,7 +157,7 @@ textarea:focus {
 }
 
 .form {
-  padding: $lg;
+  padding: 0 $lg;
   &--center {
     text-align: center;
     input {

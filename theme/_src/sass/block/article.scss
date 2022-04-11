@@ -487,3 +487,33 @@
     }
   }
 }
+
+.side-img {
+  display: grid;
+  gap: $lg;
+
+  @include r(xl) {
+    gap: calc(2 * $lg);
+    grid-template-columns: 40% 1fr;
+    background-position: 100% 0;
+  }
+
+  &__cnt {
+    background: url("@/img/bg/bg_benefits.png") no-repeat top right;
+    background-size: contain;
+  }
+
+  &__img {
+    min-height: 450px;
+    max-width: 450px;
+    @include rmax(md) {
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {}
+}

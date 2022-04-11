@@ -1,24 +1,4 @@
-.benefits {
-	display: grid;
-	gap: $lg;
-	@include r(xl) {
-		gap: calc(2 * $lg);
-		grid-template-columns: 33% 1fr;
-		background-position: 100% 0;
-	}
-	&__cnt {
-		background: url("@/img/bg/bg_benefits.png") no-repeat top right;
-		@include r(xl) {
-			padding: calc(2 * $lg) 0;
-		}
-	}
-	&__img {
-		background: url("@/img/angel.jpg") no-repeat 50% 50% / cover;
-		min-height: 450px;
-	}
-	&__title {
-	}
-}
+
 
 .benefits-list {
 	display: grid;
@@ -28,7 +8,7 @@
 		&:not(:first-child) {
       margin-top: calc(2 * $lg);
     }
-		gap: 80px 100px;
+		gap: $lg;
 	}
   &--article {
     grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
@@ -56,6 +36,7 @@
 .benefit {
 	&__ico {
 		font-size: 46px;
+    line-height: 0;
 		color: $c-main;
 	}
 	&__title {
