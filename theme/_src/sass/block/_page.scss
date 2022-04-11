@@ -275,28 +275,6 @@ a[href*="tel"] {
 	}
 }
 
-.article-list {
-	display: grid;
-	gap: $lg;
-	@include r(md) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@include r(lg) {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
-
-.religions {
-	background: $c-light url("@/img/bg/bg_right.png") no-repeat right top;
-}
-.religions-list {
-	display: grid;
-	gap: $lg;
-	@include r(md) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
 .footer-about {
 	display: flex;
 	align-items: center;

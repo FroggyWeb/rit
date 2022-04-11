@@ -1,0 +1,217 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link">Тарифы на похороны</span>
+    </li>
+  </ul>
+
+  <div class="section">
+    <div class="page-intro-wrap section">
+      <div class="page-intro-img" style="background-image: url('@/img/content/inro_tarifs.jpg')"></div>
+      <div class="page-intro">
+        <h1 class="title-section">Подготовили выгодные тарифы на организацию похорон под ключ</h1>
+        <p class="page-intro__cnt">Мы искренне сопереживаем вашему горю и поможем пережить горечь утраты. Наше ритуальное агентство предлагает организацию. Мы искренне сопереживаем вашему горю и поможем пережить горечь утраты.</p>
+        <div class="page-intro__help help">
+          <a href="#" class="btn btn--dark">Составить тариф</a>
+          <a href="tel:+79242409074" class="contact">
+            <div class="contact__cnt">
+              <div class="contact__pre">Круглосуточно</div>
+              <div class="contact__txt">+7 (924) 240-90-74</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="btn btn--title">Наши преимущества</div>
+    <div class="section-intro">
+      <h2 class="title-section">Мы понимаем, что смерть дорогого человека – сложное эмоциональное потрясение</h2>
+      <div class="title-section__cnt">
+        <!-- copy from  benefits.html-->
+        <div class="benefits-list">
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('prayer') }}
+            </div>
+            <h3 class="benefit__title">Индивидуальный подход</h3>
+            <div class="benefit__txt">Мы понимаем, что смерть дорогого человека – сложное эмоциональное потрясение,
+              поэтому
+              обеспечиваем все условия для того, чтобы семья покойного не заботилась ни о каких вопросах по организации
+              прощальной церемонии</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('dove') }}
+            </div>
+            <h3 class="benefit__title">15-летний опыт организации похорон</h3>
+            <div class="benefit__txt">Уже на протяжении 15 лет мы организуем прощальные церемонии. У нас есть надежные
+              подрядчики, квалифицированный персонал, современная техника. Мы работаем профессионально, оперативно, с
+              заботой о
+              людях, которым пришлось понести горечь утраты</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('wreath') }}
+            </div>
+            <h3 class="benefit__title">Большой выбор ритуальных атрибутов</h3>
+            <div class="benefit__txt">Мы сотрудничаем со многими подрядчиками, которые обеспечивают наши мероприятия
+              элементами
+              оформления и ритуальными принадлежностями</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('ruble') }}
+            </div>
+            <h3 class="benefit__title">Демократичная стоимость услуг</h3>
+            <div class="benefit__txt">Цена зависит от пакета услуг – у нас есть предложения от «эконом» до «премиум».
+              Предварительную стоимость вы можете узнать на нашем сайте или по контактному телефону</div>
+          </div>
+        </div>
+        <!-- copy from  benefits.html-->
+      </div>
+    </div>
+  </div>
+
+  <div class="section section--bg section--dark tarif">
+    <div class="btn btn--title">Тарифы на похороны</div>
+    <div class="section-intro">
+      <h2 class="title-section">Разноценовые тарифы на организацию похорон</h2>
+      <div class="title-section__cnt">
+        <p>Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными профессионалами и грамотной
+          организации церемонии прощания.</p>
+      </div>
+    </div>
+
+    <div class="tarif-list">
+      <a href="#" class="service-card service-card--tarif">
+        <div class="service-card__ico ico ico--round ico--round-big">
+          {{ macro.iconSvg('portrait') }}
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Базовый тариф</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+        </div>
+        <div class="service-card__arrow">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+      </a>
+      <a href="#" class="service-card service-card--tarif">
+        <div class="service-card__ico ico ico--round ico--round-big">
+          {{ macro.iconSvg('christian-cross') }}
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Расширенный тариф</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+        </div>
+        <div class="service-card__arrow">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+      </a>
+      <a href="#" class="service-card service-card--tarif">
+        <div class="service-card__ico ico ico--round ico--round-big">
+          {{ macro.iconSvg('grave') }}
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Особый тариф</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+        </div>
+        <div class="service-card__arrow">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+      </a>
+      <a href="#" class="service-card service-card--tarif">
+        <div class="service-card__ico ico ico--round ico--round-big">
+          {{ macro.iconSvg('church') }}
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Премиум тариф</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+        </div>
+        <div class="service-card__arrow">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+      </a>
+      <a href="#" class="service-card service-card--tarif">
+        <div class="service-card__ico ico ico--round ico--round-big">
+          {{ macro.iconSvg('angel') }}
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Престиж тариф</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+        </div>
+        <div class="service-card__arrow">
+          {{ macro.iconSvg('arrow-left') }}
+        </div>
+      </a>
+    </div>
+  </div>
+
+  {% include "parthtml/configurator.html" %}
+
+  <div class="section">
+    <div class="btn btn--title">Что такое тарифы?</div>
+    <h2 class="title-section">Что такое тарифы на организацию похорон в Санкт-Петербурге?</h2>
+    <div class="section-intro">
+      <p>Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными профессионалами и грамотной
+      организации церемонии прощания. Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными
+      профессионалами и грамотной организации Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с
+      тактичными профессионалами</p>
+      <p>Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными профессионалами и грамотной
+      организации церемонии прощания. Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными
+      профессионалами Будьте уверены в подборе высококачественного сервиса, в сотрудничестве с тактичными профессионалами</p>
+    </div>
+    <div class="benefits-list benefits-list--line">
+      <div class="benefit">
+        <div class="benefit__ico ico">
+          {{ macro.iconSvg('prayer') }}
+        </div>
+        <h3 class="benefit__title">Индивидуальный подход</h3>
+        <div class="benefit__txt">Мы понимаем, что смерть дорогого человека – сложное эмоциональное потрясение, поэтому
+          обеспечиваем все условия для того, чтобы семья покойного не заботилась ни о каких вопросах по организации
+          прощальной церемонии</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__ico ico">
+          {{ macro.iconSvg('dove') }}
+        </div>
+        <h3 class="benefit__title">15-летний опыт организации похорон</h3>
+        <div class="benefit__txt">Уже на протяжении 15 лет мы организуем прощальные церемонии. У нас есть надежные
+          подрядчики, квалифицированный персонал, современная техника. Мы работаем профессионально, оперативно, с заботой о
+          людях, которым пришлось понести горечь утраты</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__ico ico">
+          {{ macro.iconSvg('wreath') }}
+        </div>
+        <h3 class="benefit__title">Большой выбор ритуальных атрибутов</h3>
+        <div class="benefit__txt">Мы сотрудничаем со многими подрядчиками, которые обеспечивают наши мероприятия элементами
+          оформления и ритуальными принадлежностями</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__ico ico">
+          {{ macro.iconSvg('ruble') }}
+        </div>
+        <h3 class="benefit__title">Демократичная стоимость услуг</h3>
+        <div class="benefit__txt">Цена зависит от пакета услуг – у нас есть предложения от «эконом» до «премиум».
+          Предварительную стоимость вы можете узнать на нашем сайте или по контактному телефону</div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  {% include "parthtml/form-call.html" %}
+</div>
+{% endblock %}

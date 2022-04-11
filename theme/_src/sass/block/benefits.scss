@@ -47,6 +47,11 @@
       }
     }
   }
+  &--line {
+    @include r(md) {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 20%))
+    }
+  }
 }
 .benefit {
 	&__ico {

@@ -1,0 +1,151 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link">Блог</span>
+    </li>
+  </ul>
+  <div class="title-link rubric-nav-title">
+    <h2 class="title-section">Наш блог</h2>
+    <ul class="rubric-nav rubric-nav--right">
+      <li class="rubric-nav__item active">
+        <a href="#" class="rubric-nav__link">Похороны</a>
+      </li>
+      <li class="rubric-nav__item">
+        <a href="#" class="rubric-nav__link">Религии</a>
+      </li>
+      <li class="rubric-nav__item">
+        <a href="#" class="rubric-nav__link">Наши работы</a>
+      </li>
+    </ul>
+  </div>
+  <div class="article-list section">
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_01.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Можно ли заразиться коронавирусом от умершего человека?</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_02.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Традиции и обычаи. Что можно и нельзя делать во время похорон</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_03.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Как сообщить о смерти родным и близким?</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_04.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Как самостоятельно организовать похороны</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_01.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Можно ли заразиться коронавирусом от умершего человека?</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_02.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Традиции и обычаи. Что можно и нельзя делать во время похорон</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_03.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Как сообщить о смерти родным и близким?</div>
+      </div>
+    </a>
+    <a href="#" class="cart-img cart-img--article">
+      <img class="cart-img__img" src="@/img/content/article_image_04.jpg" alt="">
+      <div class="cart-img__link ico ico--round ico--round-big">
+        {{ macro.iconSvg('arrow-left') }}
+      </div>
+      <div class="cart-img__cnt">
+        <div class="cart-img__info"><span class="cart-img__data">21.08.2021</span>
+          <span class="cart-img__rubric">РАЗНОЕ</span>
+        </div>
+        <div class="cart-img__title">Как самостоятельно организовать похороны</div>
+      </div>
+    </a>
+    <div class="article-list__footer">
+      <button id="get-item-more" class="get-item-more get-item-more__article loading">
+        <svg class="iconsvg load_icon ">
+          <use xlink:href="../img/sprite.svg#load_icon"></use>
+        </svg>
+        Загрузить больше
+      </button>
+      <ul class="pagination article-list__pagination">
+        <li class="pagination__item active">
+          <a href="" class="pagination__link">1</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  {% include 'parthtml/form-call.html' %}
+</div>
+{% endblock %}
