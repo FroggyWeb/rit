@@ -134,6 +134,9 @@ a[href*="tel"] {
 			margin-left: -15px;
 			margin-right: -15px;
 		}
+    .form {
+      padding: 0 $lg;
+    }
 	}
 	&--dark {
 		background-color: $c-main;
@@ -152,7 +155,7 @@ a[href*="tel"] {
 }
 
 .title-section {
-	margin: 0 0 $lg;
+	margin: 0 0 1em;
 	font-size: 40px;
 	font-family: $f-title;
 	line-height: 1.2;
@@ -161,9 +164,6 @@ a[href*="tel"] {
 	// margin-bottom: ;
 	@include rmax(sm) {
 		font-size: 28px;
-		&__cnt {
-			display: none;
-		}
 	}
 	@include rmax(xs) {
 		font-size: 24px;

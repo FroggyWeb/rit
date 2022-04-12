@@ -23,7 +23,35 @@ textarea:focus {
 .form {
 	max-width: 650px;
 	margin: 0 auto;
+  padding:$lg;
+  &--center {
+    text-align: center;
+    input {
+      text-align: center;
+    }
+  }
+
+  &--aside {
+    .form__title {
+      font-size: 32px;
+    }
+    .form__txt {
+      font-size: 16px;
+    }
+    .form__footer {
+      font-size: 14px;
+    }
+    [type="submit"] {
+      width: 100%;
+    }
+  }
 }
+
+.form--dark {
+  background: $c-main url("@/img/bg/bg_form_call-dark.png") no-repeat bottom center;
+  color: #fff;
+}
+
 
 .form-line {
 	position: relative;
@@ -136,6 +164,9 @@ textarea:focus {
 	text-align: center;
 	background: $c-light url("@/img/bg/bg_form_call.png") no-repeat bottom
 		center;
+  .form-line--inline {
+    justify-content: center;
+  }
 }
 
 .form-call-cnt.form-call-dark {
@@ -143,6 +174,7 @@ textarea:focus {
 		center;
 	color: #fff;
 }
+
 .form-call-dark {
 	.ico--round {
 		background-color: $c-light;
@@ -156,31 +188,5 @@ textarea:focus {
 	}
 }
 
-.form {
-  padding: 0 $lg;
-  &--center {
-    text-align: center;
-    input {
-      text-align: center;
-    }
-  }
-  &--aside {
-    .form__title {
-      font-size: 32px;
-    }
-    .form__txt {
-      font-size: 16px;
-    }
-    .form__footer {
-      font-size: 14px;
-    }
-    [type="submit"] {
-      width: 100%;
-    }
-  }
-}
 
-.form--dark {
-  background: $c-main url("@/img/bg/bg_form_call-dark.png") no-repeat bottom center;
-  color: #fff;
-}
+

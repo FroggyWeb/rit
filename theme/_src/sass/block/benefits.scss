@@ -2,7 +2,7 @@
 
 .benefits-list {
 	display: grid;
-	gap: $lg;
+	gap: calc(2*$lg) $lg;
 	grid-template-columns: repeat(2, 1fr);
 	@include r(lg) {
 		&:not(:first-child) {
@@ -28,19 +28,22 @@
     }
   }
   &--line {
-    @include r(md) {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 20%))
+    @include r(xl) {
+      grid-template-columns: repeat(4, 1fr)
     }
   }
 }
 .benefit {
 	&__ico {
-		font-size: 46px;
+		font-size: 36px;
     line-height: 0;
 		color: $c-main;
+    @include r(sm) {
+      font-size: 46px;
+    }
 	}
 	&__title {
-		margin-top: 32px;
+		margin-top: 1.5em;
 		font-weight: 500;
 		font-size: 22px;
 		@include rmax(sm) {

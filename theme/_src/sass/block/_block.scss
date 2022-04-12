@@ -38,24 +38,27 @@
 
 .section-intro {
 	margin-bottom: $lg;
-  .title-section {
-    align-self: flex-start;
-  }
 	@include r("md") {
-		display: grid;
+    display: grid;
 		gap: calc(0.5 * $lg) $lg;
 		align-items: end;
 		grid-template-columns: 1fr 1fr;
 		margin-bottom: calc(2 * $lg);
 		p {
-			font-size: 18px;
+      font-size: 18px;
 			margin: 0 0 0.5em;
 		}
 	}
+  .title-section {
+    align-self: flex-start;
+    @include r(md) {
+      margin: 0;
+    }
+  }
 	&--title-line {
-		align-items: start;
+    align-items: start;
 		.title-section {
-			grid-column: span 2;
+      grid-column: span 2;
 			margin-bottom: 2rem;
 		}
 	}

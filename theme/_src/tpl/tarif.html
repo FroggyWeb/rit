@@ -1,0 +1,194 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="article-wrap section">
+    <div class="article-aside">
+      <div class="form--dark form--center" data-da=".mob-aside,1400">
+        <form action="" class="form-call form form--aside" name="formservice">
+          <div class="form__title">Заказать услугу</div>
+          <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее
+            решение</p>
+          <div class="form-line">
+            <input type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-line">
+            <button type="submit" class="btn">Заказать услугу</button>
+          </div>
+          <p class="form__footer">Оставляя заявку, вы даете согласие на обработку персональных данных</p>
+        </form>
+      </div>
+    </div>
+
+    <main class="article-main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Наши тарифы</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__link">Особый тариф</span>
+        </li>
+      </ul>
+
+      <h1 class="title-section">Тариф «Особый»</h1>
+
+      <div class="article-header">
+        <div class="author">
+          <div class="author__img">
+            <img src="@/img/content/author.jpg" alt="Александр Хваленко">
+          </div>
+          <div class="author__cnt">
+            <div class="light-txt">Автор материала</div>
+            <div class="author__name">Александр Хваленко</div>
+          </div>
+        </div>
+        <div class="article-header__data">
+          <span class="article-header__rubric light-txt">Тарифы</span>
+          <span class="light-txt">3 минуты на чтение</span>
+        </div>
+      </div>
+      <div class="article-tarif-card">
+        <div class="service-card service-card--tarif">
+          <div class="service-card__ico ico ico--round ico--round-big">
+            {{ macro.iconSvg('grave') }}
+          </div>
+          <div class="service-card__cnt">
+            <p class="service-card__txt">Лаконичный гроб отечественного производства. Выполнен из древесно-волокнистой плиты, изготовленной под высоким давлением
+            и температурой. Каштановый цвет изделия покрыт глянцевым лаком. Четыре классические ручки по бокам для транспортировки.
+            Подходит для похорон людей любых конфессий.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mob-aside"></div>
+
+      <div class="article-gallery">
+        <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img
+            src="@/img/content/gallery.jpg" alt=""></a>
+        <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img
+            src="@/img/content/gallery.jpg" alt=""></a>
+        <a class="article-gallery__item" href="@/img/content/gallery.jpg" data-fancybox="gallery"><img
+            src="@/img/content/gallery.jpg" alt=""></a>
+      </div>
+
+      <div class="article article--limit">
+        <p>Мы понимаем, как тяжело терять близких людей, и искренне сопереживаем вам. Предлагаем посильную помощь — моральную
+        поддержку ритуального агента и организацию стандартных похорон в Москве. В погребение класса «стандарт» входит
+        производство и доставка ритуальных принадлежностей и предоставление специального транспорта.</p>
+        <h2>Сколько стоит организация похорон?</h2>
+        <p>Комплексная организация погребения стоит 27 700 рублей. Мы принимаем оплату несколькими способами:</p>
+        <ul>
+          <li>Наличными на руки агенту;</li>
+          <li>Переводим на банковскую карту или расчетный счет;</li>
+          <li>Наличными/переводом и компенсацией от государства.</li>
+        </ul>
+        <p>Если вы хотите снизить затраты, обратитесь за компенсацией на погребение в ПФ РФ, МФЦ или ФСС — она составляет 16 562
+          рубля. Пособие выплачивают на похороны мертворожденных детей после 190 дня беременности, нетрудоустроенных пенсионеров
+          или неработающих людей. Позвоните нам, и мы расскажем, с чего начать оформление материальной помощи при получении
+          ритуальных услуг.</p>
+          <h2>Похороны «Особый» стоимость, комплекс</h2>
+          <div class="article-list-prod">
+            <div class="article-list-prod__item">
+              <div class="article-list-prod__img">
+                <img src="../img/content/item 1-1.jpg" alt="">
+              </div>
+              <a href="#" class="article-list-prod__title">Гроб Саркофаг глянец</a>
+              <div class="price article-list-prod__price">49 500 ₽</div>
+              <a href="#" class="price article-list-prod__link">Смотреть товар</a>
+            </div>
+            <div class="article-list-prod__item">
+              <div class="article-list-prod__img">
+                <img src="../img/content/category_image_03.jpg" alt="">
+              </div>
+              <a href="#" class="article-list-prod__title">Фурнитура для гроба — ручки для переноски и крест</a>
+              <div class="price article-list-prod__price">15 500 ₽</div>
+              <a href="#" class="price article-list-prod__link">Смотреть товар</a>
+            </div>
+            <div class="article-list-prod__item">
+              <div class="article-list-prod__img">
+                <img src="../img/content/category_image_02.jpg" alt="">
+              </div>
+              <a href="#" class="article-list-prod__title">Постель «Гладь» из шелковой или атласной ткани</a>
+              <div class="price article-list-prod__price">500 ₽</div>
+              <a href="#" class="price article-list-prod__link">Смотреть товар</a>
+            </div>
+          </div>
+          <div class="catalog-more">
+            <button id="get-item-more" class="get-item-more loading">
+              {{ macro.iconSvg('load_icon') }}
+              Загрузить больше
+            </button>
+          </div>
+          <div class="article-info">
+            <div class="ico ico--round  ico--round-big">
+
+              <svg class="iconsvg rose ">
+                <use xlink:href="../img/sprite.svg#rose"></use>
+              </svg>
+
+            </div>
+            <div class="article-info__cnt">В случае смерти близкого позвоните в ритуальное наше агентство <a
+                href="tel:+78122107896">+7 (812) 210-78-96</a>. Специалисты компании проконсультируют
+              по вопросам организации захоронения или кремации в Санкт-Петербурге и Ленинградской области!</div>
+          </div>
+          <h2>Сколько стоит организация похорон?</h2>
+          <p>Комплексная организация погребения стоит 27 700 рублей. Мы принимаем оплату несколькими способами:</p>
+          <ul>
+            <li>Наличными на руки агенту;</li>
+            <li>Переводим на банковскую карту или расчетный счет;</li>
+            <li>Наличными/переводом и компенсацией от государства.</li>
+          </ul>
+          <p>Если вы хотите снизить затраты, обратитесь за компенсацией на погребение в ПФ РФ, МФЦ или ФСС — она составляет 16 562
+          рубля. Пособие выплачивают на похороны мертворожденных детей после 190 дня беременности, нетрудоустроенных пенсионеров
+          или неработающих людей. Позвоните нам, и мы расскажем, с чего начать оформление материальной помощи при получении
+          ритуальных услуг.</p>
+
+          <div class="form-call-cnt">
+            <div class="form-call form">
+              <div class="btn btn--title btn-center">Замена товаров</div>
+              <div class="form__title">Товары в смете можно заменить</div>
+              <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее решение. Оставьте свой номер, а мы перезвоним</p>
+              <div class="form-line form-line--inline">
+                <a href="tel:+79242409074" class="contact">
+                  <div class="contact__ico ico ico--round">
+                    {{ macro.iconSvg('phone') }}
+                  </div>
+                  <div class="contact__cnt">
+                    <div class="contact__pre light-txt">Круглосуточно</div>
+                    <div class="contact__txt">+7 (924) 240-90-74</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h2>Что входит в стоимость похорон в тарифе?</h2>
+          <ul>
+            <li>Консультация агента по вопросам правильного оформления документов и/или получения материальной компенсации от государства;</li>
+            <li>Выбор, производство и доставка ритуальных принадлежностей по указанному адресу — на дом, к моргу или крематорию;</li>
+            <li>Наличными/переводом и компенсацией от государства.</li>
+          </ul>
+          <p>В стандартную стоимость погребения входят обычные принадлежности — например, гроб размера «стандарт», дополнительно вы
+          можете купить похоронный венок. Если вам нужны нестандартные товары/размеры, скажите об этом ритуальному агенту — он
+          подберет решение с минимальной доплатой.</p>
+          <p>Вы легко можете заказать дополнительные услуги: например, организацию отпевания в храме или поминок в выбранном кафе.
+          Стоимость таких услуг обсуждается отдельно и зависит от ряда факторов, например — выбранного храма и кафе.</p>
+
+      </div>
+
+    </main>
+
+  </div>
+
+    {% include "parthtml/tarif.html" %}
+    {% include "parthtml/configurator.html" %}
+    {% include "parthtml/form-call-dark.html" %}
+
+</div>
+
+
+{% endblock %}
