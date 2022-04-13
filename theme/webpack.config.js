@@ -9,6 +9,7 @@ module.exports = {
   mode: "none",
   entry: {
     main: "./_src/js/main.js",
+    map: "./_src/js/map.js",
   },
 
   output: {

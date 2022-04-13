@@ -1,0 +1,69 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link">Контактная информация</span>
+    </li>
+  </ul>
+  <h1 class="title-section">Контакты</h1>
+  <div class="contacts section">
+    <div class="contacts__item">
+      <div class="light-txt">Круглосуточный номер</div>
+      <a href="tel:88002409074" class="contacts-cnt contacts__tel">8 (800) 240-90-74</a><br>
+      <a href="mailto:pohoronii.sbp@mail.ru" class="contacts__mail">pohoronii.sbp@mail.ru</a>
+    </div>
+    <div class="contacts__item">
+      <div class="light-txt">Главный офис</div>
+      <div class="contacts-cnt">пр-кт Авиастроителей, 28А, офис 13</div>
+      <div class="light-txt">с 9:00 до 20:00, вс и сб - выходные</div>
+    </div>
+    <div class="contacts__item">
+      <div class="light-txt">Выставочный зал</div>
+      <div class="contacts-cnt">ул. Гоголя 12, офис 15</div>
+      <div class="light-txt">с 8:00 до 18:00, без выходных</div>
+    </div>
+  </div>
+  <div class="map section">
+    <div id="map" style="width: 100%; height: 400px"></div>
+  </div>
+
+  <div class="section">
+    <div class="btn btn--title">Удобные маршруты</div>
+    <div class="section-intro">
+      <h2 class="title-section">Ближайшие маршруты до главного офиса</h2>
+      <div class="title-section__cnt">
+        <div class="benefits-list">
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('bus') }}
+            </div>
+            <h3 class="benefit__title">Автобусы и маршрутное такси</h3>
+            <div class="benefit__txt">От станции метро Достоевская на маршруте №13, 15 или 18 до остановки проспект Авиастроителей</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__ico ico">
+              {{ macro.iconSvg('metro') }}
+            </div>
+            <h3 class="benefit__title">Метрополитен</h3>
+            <div class="benefit__txt">От станции метро Достоевская до станции Авиастроителей, от станции пешком 10 минут</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "parthtml/form-call.html" %}
+
+</div>
+
+{% endblock %}
+
+{% block scriptfooter %}
+
+
+<script defer src="@/js/map.js"></script>
+{% endblock %}

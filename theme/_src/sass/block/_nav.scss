@@ -332,3 +332,35 @@
   }
 }
 
+.aside-nav {
+  position: sticky;
+  top:0;
+  @include rmax(lg) {
+    display: none;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 1em;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item.active {
+    .aside-nav__link {
+      color: $c-main;
+    }
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: .2em 0;
+    &:hover {
+      color: $c-main;
+    }
+  }
+}
+

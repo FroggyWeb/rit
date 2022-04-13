@@ -590,4 +590,77 @@
   }
 }
 
-.price {}
+.benefits-about {
+  background: url('@/img/bg/bg_benefits.png') top right no-repeat;
+  .benefits-list {
+    max-width: 900px;
+  }
+}
+
+.article-about {
+  background: $c-light url('@/img/bg/bg_benefits.png') top right no-repeat;
+  p {
+    max-width: 900px;
+  }
+  &__img {
+    margin-top: calc(2*$lg);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.article-lead {
+  display: grid;
+  gap: $lg;
+  @include r(md) {
+    gap: calc(2*$lg);
+    grid-template-columns: minmax(350px, 700px) 320px;
+  }
+  &__lead {
+    max-width: 50vw;
+    position: relative;
+    @include r(md) {
+      .benefit {
+        position: absolute;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.contacts-cnt {
+  font-weight: 500;
+  font-size: 22px;
+  & + .light-txt {
+    margin-top: 1em;
+  }
+}
+
+.contacts {
+  display: grid;
+  gap: $lg;
+  @include r(sm) {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  &__item {}
+
+  &__tel {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__mail {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+
+}
+
+.light-txt {}
+
+
