@@ -147,6 +147,50 @@
 	}
 }
 
+.rating-inputs-wrap {
+  text-align-last: left;
+}
+
+.rating-inputs {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding-left:  30px;
+  label {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url('@/img/star-blue.svg') no-repeat center center;
+    margin-left: .25em;
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .2s;
+  }
+  input {
+    display: none;
+  }
+  span {
+    margin-right: 1em;
+  }
+}
+
+.rating-inputs>input:checked~label {
+  opacity: 1;
+}
+
+.rating-inputs:not(:checked)>label:hover,
+.rating-inputs:not(:checked)>label:hover~label {
+  opacity: 1;
+}
+
+.rating-inputs>input:checked+label:hover,
+.rating-inputs>input:checked+label:hover~label,
+.rating-inputs>input:checked~label:hover,
+.rating-inputs>input:checked~label:hover~label,
+.rating-inputs>label:hover~input:checked~label {
+  opacity: 1;
+}
+
 .reviews {
 	display: grid;
 	gap: $lg;
@@ -166,5 +210,10 @@
 			}
 		}
 	}
+  &--page {
+    @include r(xxl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 

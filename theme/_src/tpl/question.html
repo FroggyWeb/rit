@@ -1,0 +1,83 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="article-wrap section">
+    <div class="article-aside">
+      <div class="aside-nav">
+        <div class="aside-nav__title">Компания</div>
+        <ul class="aside-nav__list">
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">О компании</a></li>
+          <li class="aside-nav__item active"><a href="" class="aside-nav__link">Вопросы и ответы</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Отзывы о нас</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Документы</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Адреса моргов</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Адреса кладбищ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="article-main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__link">Вопросы и ответы</span>
+        </li>
+      </ul>
+      <h1 class="title-section">Вопросы и ответы</h1>
+      <div class="faq-list a-container">
+        <div class="faq-list__item a-item">
+          <div class="faq-list__q a-btn">Как получить свидетельство о смерти в случае отсутствия у умершего паспорта? <span
+              class="marker"></span></div>
+          <div class="a-panel">
+            <div class="faq-list__a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore omnis cupiditate
+              repellat! Voluptatem eveniet odit libero eaque nihil aut fugiat expedita possimus debitis quos aperiam,
+              blanditiis sunt doloribus at?</div>
+          </div>
+        </div>
+        <div class="faq-list__item a-item">
+          <div class="faq-list__q  a-btn">Какие документы нужно иметь на руках в день похорон?<span class="marker"></span>
+          </div>
+          <div class="a-panel">
+            <div class="faq-list__a">Выданный полицией протокол осмотра тела. Выписанная участковым врачом или бригадой скорой
+              помощи справка, подтверждающая факт смерти. Выданное в поликлинике свидетельство о смерти. Получаемое в органе
+              Записи Актов Гражданского Состояния
+              гербовое свидетельство. Выдаваемая там же справка дающая право получить государственное пособие на погребение.
+            </div>
+          </div>
+        </div>
+        <div class="faq-list__item a-item">
+          <div class="faq-list__q  a-btn">Какие услуги оказывает распорядитель похорон?<span class="marker"></span></div>
+          <div class="a-panel">
+            <div class="faq-list__a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore omnis cupiditate
+              repellat! Voluptatem eveniet odit libero eaque nihil aut fugiat expedita possimus debitis quos aperiam,
+              blanditiis sunt doloribus at?</div>
+          </div>
+        </div>
+        <div class="faq-list__item a-item">
+          <div class="faq-list__q a-btn">Организует ли похоронная компания “Название” перевозку тела умершего в другой регион
+            (страну) для захоронения?<span class="marker"></span></div>
+          <div class="a-panel">
+            <div class="faq-list__a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore omnis cupiditate
+              repellat! Voluptatem eveniet odit libero eaque nihil aut fugiat expedita possimus debitis quos aperiam,
+              blanditiis sunt doloribus at?</div>
+          </div>
+        </div>
+        <div class="faq-list__item a-item">
+          <div class="faq-list__q a-btn">Какова минимальная стоимость организации кремации?<span class="marker"></span></div>
+          <div class="a-panel">
+            <div class="faq-list__a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore omnis cupiditate
+              repellat! Voluptatem eveniet odit libero eaque nihil aut fugiat expedita possimus debitis quos aperiam,
+              blanditiis sunt doloribus at?</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  {% include "parthtml/form-qa.html" %}
+</div>
+
+{% endblock %}

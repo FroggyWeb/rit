@@ -1,0 +1,184 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="article-wrap section">
+    <div class="article-aside">
+      <div class="aside-nav">
+        <div class="aside-nav__title">Компания</div>
+        <ul class="aside-nav__list">
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">О компании</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Вопросы и ответы</a></li>
+          <li class="aside-nav__item active"><a href="" class="aside-nav__link">Отзывы о нас</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Документы</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Адреса моргов</a></li>
+          <li class="aside-nav__item"><a href="" class="aside-nav__link">Адреса кладбищ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="article-main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__link">Отзывы</span>
+        </li>
+      </ul>
+      <h1 class="title-section">Отзывы о нас</h1>
+      <div class="reviews-banner section section--bg">
+        <div class="rate">
+          <div class="rate__title">4.8 рейтинг</div>
+          <div class="rate__rating">
+            <div class="rating" data-rating="4">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            На основе 17 оценок
+          </div>
+        </div>
+        <div class="reviews-banner__aside">
+          Пользовались<br> нашими услугами?
+          <a href="#form-review" class="btn btn--big btn--dark">Оставить отзыв</a>
+        </div>
+      </div>
+
+      <div class="reviews reviews--page">
+        <div class="review">
+          <div class="review__header">
+            <div class="review__name">Анастасия</div>
+            <div class="rating" data-rating="4">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="review__cnt">
+            <p>Когда в семье случилось несчастье, важна поддержка и быстрота в делах. Агенству огромное спасибо что вы есть!
+              Всех
+              сотрудников не запомнили, но спасибо всем) отдельно работала с нами Галина Степановна и конечно ей отдельные
+              слова
+              благодарности за терпение) не сразу сообразишь сам что необходимы платки, какой уместен венок и тд. Спасибо
+              огромное
+              Галина Степановна что наш памятный и печальных день прошёл светло и без заминок!</p>
+          </div>
+          <div class="review__footer"><a href="#" class="review__more">Читать полностью</a></div>
+        </div>
+
+        <div class="review">
+          <div class="review__header">
+            <div class="review__name">Александр</div>
+            <div class="rating" data-rating="5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="review__cnt">
+            <p>Когда в семье случилось несчастье, важна поддержка и быстрота в делах. Агенству огромное спасибо что вы есть!
+              Всех
+              сотрудников не запомнили, но спасибо всем) отдельно работала с нами Галина Степановна и конечно ей отдельные
+              слова
+              благодарности</p>
+          </div>
+          <div class="review__footer"><a href="#" class="review__more">Читать полностью</a></div>
+        </div>
+
+        <a href="#" class="review cart-img review--banner">
+          <img class="cart-img__img" src="@/img/content/review_box.jpg" alt="">
+          <div class="cart-img__link ico ico--round ico--round-big">
+            {{ macro.iconSvg('arrow-left') }}
+          </div>
+          <div class="cart-img__cnt">
+            <div class="cart-img__title">Организовали мусульманские похороны</div>
+          </div>
+          <div class="review__header">
+            <div class="review__name">Мария</div>
+            <div class="rating" data-rating="3">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="review cart-img review--banner">
+          <img class="cart-img__img" src="@/img/content/review_box2.jpg" alt="">
+          <div class="cart-img__link ico ico--round ico--round-big">
+            {{ macro.iconSvg('arrow-left') }}
+          </div>
+          <div class="cart-img__cnt">
+            <div class="cart-img__title">Организовали похороны, следуя православным традициям</div>
+          </div>
+          <div class="review__header">
+            <div class="review__name">Анастасия</div>
+            <div class="rating" data-rating="5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </a>
+
+        <div class="review">
+          <div class="review__header">
+            <div class="review__name">Александр</div>
+            <div class="rating" data-rating="5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="review__cnt">
+            <p>Когда в семье случилось несчастье, важна поддержка и быстрота в делах. Агенству огромное спасибо что вы есть!
+              Всех
+              сотрудников не запомнили, но спасибо всем) отдельно работала с нами Галина Степановна и конечно ей отдельные
+              слова
+              благодарности</p>
+          </div>
+          <div class="review__footer"><a href="#" class="review__more">Читать полностью</a></div>
+        </div>
+
+        <div class="review">
+          <div class="review__header">
+            <div class="review__name">Михаил</div>
+            <div class="rating" data-rating="5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="review__cnt">
+            <p>Когда в семье случилось несчастье, важна поддержка и быстрота в делах. Агенству огромное спасибо что вы есть!
+              Всех
+              сотрудников не запомнили, но спасибо всем) отдельно работала с нами Галина Степановна и конечно ей отдельные
+              слова
+              благодарности отдельно работала с нами Галина Степановна и конечно ей отдельные слова благодарности</p>
+          </div>
+          <div class="review__footer"><a href="#" class="review__more">Читать полностью</a></div>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+  {% include "parthtml/form-review.html" %}
+</div>
+
+{% endblock %}

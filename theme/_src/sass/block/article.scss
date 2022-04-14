@@ -661,6 +661,119 @@
 
 }
 
-.light-txt {}
+.rate {
+  &__title {
+    font-size: 40px;
+    font-family: $f-title;
+    color: $c-main;
+    margin-bottom: .5em;
+  }
 
+  &__rating {
+    display: flex;
+    flex-wrap: wrap;
+    .rating {
+      margin-right: 1em;
+    }
+  }
+}
 
+.reviews-banner {
+  display: grid;
+  gap: $lg;
+  justify-items: center;
+  background: #eceef2 url('@/img/bg/bg_form_call.png') no-repeat bottom;
+  @include r(md) {
+    justify-items: start;
+    grid-template-columns: 1fr fit-content(50%);
+  }
+  &__aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $lg;
+    font-weight: 500;
+    align-items: center;
+  }
+}
+
+.sort-abc {
+  background: #eceef2 url('@/img/bg/bg_form_call.png') no-repeat bottom;
+  padding: calc(2*$lg);
+  &__title {
+    font-size: 32px;
+    font-family: $f-title;
+    margin-bottom: .5em;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: .5em;
+    &.active {
+      background-color: $c-main;
+      .sort-abc__letter {
+        color: #fff;
+      }
+    }
+  }
+  &__letter {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    line-height: 2em;
+    font-weight: 500;
+  }
+}
+
+.sort-letter {
+  margin: 0 0 1em;
+  font-size: 40px;
+  font-family: $f-title;
+  padding-bottom: .25em;
+  border-bottom: 1px solid $c-light-b;
+}
+
+.morgue-cards {
+  @include r(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include r(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &:not(:last-child) {
+    margin-bottom: $lg;
+  }
+  .service-card {
+    border: 1px solid $c-light-b;
+  }
+  .service-card__cnt {
+    margin-top: 0;
+    margin-bottom: $lg;
+  }
+  .contact {
+    display: flex;
+    margin-top: 1em;
+  }
+  .contact__txt {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .service-card__map-link {
+    margin-top: auto;
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    &:hover {
+      color: $c-main;
+    }
+  }
+
+}

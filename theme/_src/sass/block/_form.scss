@@ -40,6 +40,7 @@ textarea:focus {
     }
     .form__footer {
       font-size: 14px;
+      margin-top: 1em;
     }
     [type="submit"] {
       width: 100%;
@@ -55,13 +56,18 @@ textarea:focus {
 
 .form-line {
 	position: relative;
-	margin-bottom: calc(0.5 * $lg);
+	margin-bottom: calc(0.75 * $lg);
 	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
 		width: 100%;
 	}
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 30px;
+  }
 	&--inline {
 		display: flex;
-		gap: $lg;
+		gap: calc(0.75 * $lg);
 		@include rmax(sm) {
 			flex-direction: column;
       align-items: center;
@@ -73,7 +79,7 @@ textarea:focus {
 	font-family: $f-title;
 	font-size: 24px;
 	line-height: 1.2;
-	margin: 0 0 0.5em;
+	margin: 0 0 1em;
 	@include r(sm) {
 		font-size: 40px;
 	}
@@ -84,10 +90,6 @@ textarea:focus {
 	@include r(sm) {
 		font-size: 18px;
 	}
-}
-
-.form__footer {
-	margin: 0;
 }
 
 .popup-form {
@@ -157,18 +159,22 @@ textarea:focus {
   &--center {
     text-align: center;
   }
+  &--fill {
+    button {
+      width: 100%;
+    }
+  }
 }
 
-// Форма заказа звонка
-.form-call-cnt {
-	text-align: center;
-	background: $c-light url("@/img/bg/bg_form_call.png") no-repeat bottom
-		center;
+.form-center {
+  text-align: center;
+	background: $c-light url("@/img/bg/bg_form_call.png") no-repeat bottom center;
   .form-line--inline {
     justify-content: center;
   }
 }
 
+// Форма заказа звонка
 .form-call-cnt.form-call-dark {
 	background: $c-main url("@/img/bg/bg_form_call-dark.png") no-repeat bottom
 		center;
