@@ -1,0 +1,224 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="article-wrap section">
+    <div class="article-aside">
+      <div class="form--dark form--center" data-da=".mob-aside,1400">
+        <form action="" class="form-call form form--aside" name="formservice">
+          <div class="form__title">Заказать услугу</div>
+          <p class="form__txt">Бесплатно консультируем 24/7. Подробно ответим на ваши вопросы и предложим подходящее
+            решение</p>
+          <div class="form-line">
+            <input type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-line">
+            <button type="submit" class="btn">Заказать услугу</button>
+          </div>
+          <p class="form__footer">Оставляя заявку, вы даете согласие на обработку персональных данных</p>
+        </form>
+      </div>
+    </div>
+    <main class="article-main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Адреса наших кладбищ</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__link">Иликовское кладбище</span>
+        </li>
+      </ul>
+      <h1 class="title-section">Тариф «Особый»</h1>
+      <div class="graveyard-status">
+        <span class="graveyard-status__label">Открыто</span>
+        <span class="graveyard-status__info light-txt">{{ macro.iconSvg('info') }} Открыто для захоронений</span>
+      </div>
+      <div class="article-toc article">
+        <div class="article-toc__title title">
+          <div class="ico ico--round  ico--round-big">
+            {{ macro.iconSvg('graveyard') }}
+          </div>
+        </div>
+        <div class="article-toc__list">
+          <div class="article-toc__item">
+            <div class="contact">
+              <div class="contact__cnt">
+                <div class="contact__pre light-txt">Тип кладбища</div>
+                <div class="contact__txt">Действующий некрополь закрытого типа</div>
+              </div>
+            </div>
+          </div>
+          <div class="article-toc__item">
+            <div class="contact">
+              <div class="contact__cnt">
+                <div class="contact__pre light-txt">Местоположение</div>
+                <div class="contact__txt">Петродворцовый район Санкт-Петербурга</div>
+              </div>
+            </div>
+          </div>
+          <div class="article-toc__item">
+            <div class="contact">
+              <div class="contact__cnt">
+                <div class="contact__pre light-txt">Ближайшая станция метро</div>
+                <div class="contact__txt">Пр. Ветеранов</div>
+              </div>
+            </div>
+          </div>
+          <div class="article-toc__item">
+            <div class="contact">
+              <div class="contact__cnt">
+                <div class="contact__pre light-txt">Родственные захоронения</div>
+                <div class="contact__txt">Доступны родственные подзахоронения</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="article article--limit">
+        <p>
+          Небольшой некрополь в Санкт-Петербурге – Иликовское кладбище. Расположено в районе г. Ломоносов. В некрополе расположена
+          братская могила воинов, погибших в годы ВОВ. Выделен отдельный участок для захоронения урн в землю. Иликовское кладбище
+          благоустроено и оборудовано всей необходимой инфраструктурой для ухода за могилами. Иликовское кладбище в
+          Санкт-Петербурге входит в перечень общественных кладбищ традиционного способа погребения.
+        </p>
+        <h2>Как добраться до Иликовского кладбища</h2>
+        <h3>На метро:</h3>
+        <p>Ст. метро «Пр. Ветеранов», маршрутное такси К343 до остановки «вокзал г. Ломоносов». Пересадка на автобус 347 до
+        остановки «Кладбище Илики». До некрополя 300 м</p>
+        <h3>На Электричке:</h3>
+        <p>От Балтийского Вокзала до ст. «Ораниенбаум». Далее автобус 347 до остановки «Кладбище Илики». До некрополя 300 м</p>
+        <h3>На Машине:</h3>
+        <p>Двигайтесь по КАД в сторону г. Ломоносов. Съезд с КАД направо на Ораниенбаумский проспект. Поворот налево на
+        Александровскую улицу. Поворот налево на Иликовский проспект. Далее прямо по Сойкинской дороге до поворота налево на
+        Иликовскую дорогу. Прямо 3 км до входа в некрополь</p>
+        <h2>Средние цены на услуги Иликовского кладбища</h2>
+        <p>Родственное под захоронение: 10 000 – 50 000 руб.</p>
+        <p>Стоимость родственного подзахоронения зависит от технической сложности и объема работ по монтажу/демонтажу памятника,
+          ограды, поребрика и других элементов могильного участка.
+        </p>
+        <h2>Контактная информация кладбища</h2>
+        <p>Как доехать до Иликовского кладбища. Ниже представлены варианты проезда до Иликовского кладбища</p>
+        <div class="article-contacts">
+          <a href="tel:+79242409074" class="contact">
+            <div class="contact__ico ico ico--round">
+              {{ macro.iconSvg('phone') }}
+            </div>
+            <div class="contact__cnt">
+              <div class="contact__txt">+7 (924) 240-90-74</div>
+            </div>
+          </a>
+          <div class="contact">
+            <div class="contact__ico ico ico--round">
+              {{ macro.iconSvg('map') }}
+            </div>
+            <div class="contact__cnt">
+              <div class="contact__txt">Иликовского кладбища: г. Санкт-Петербург, г. Ломоносов, дорога на Илики, 1.</div>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="contact__ico ico ico--round">
+              {{ macro.iconSvg('clock') }}
+            </div>
+            <div class="contact__cnt">
+              <div class="contact__txt">Лето (с 1 мая по 30 сентября): ежедн. с 9.00 до 18.00<br>
+              Зима (с 1 октября по 30 апреля): ежедн. с 9.00 до 17.00<br>
+              Погребения ежедневно с 9.00 до 17.00</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <div class="section">
+    <div class="title-link">
+      <h2 class="title-section">Наши услуги</h2>
+      <a href="#" class="more more--desktop">Все услуги</a>
+    </div>
+    <div class="service-cards service-cards--inner">
+      <!-- begin service-cards -->
+      <a href="#" class="service-card service-card--service">
+        <div class="service-card__ico ico ico--round ico--round-big">
+
+          <svg class="iconsvg coffin-2 ">
+            <use xlink:href="../img/sprite.svg#coffin-2"></use>
+          </svg>
+
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Похороны в СПБ</h3>
+          <p class="service-card__txt">Организуем похороны в Санкт-Петербурге и области в срок. Учтем все ваши пожелания и
+            предпочтения</p>
+          <div class="service-card__footer light-txt">
+            <span class="service-card__footer-ico ico">
+
+              <svg class="iconsvg info ">
+                <use xlink:href="../img/sprite.svg#info"></use>
+              </svg>
+
+            </span>
+            <span class="service-card__footer-txt">Для разных религий</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="service-card service-card--service">
+        <div class="service-card__ico ico ico--round ico--round-big">
+
+          <svg class="iconsvg ashes ">
+            <use xlink:href="../img/sprite.svg#ashes"></use>
+          </svg>
+
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Кремация</h3>
+          <p class="service-card__txt">Оформим услуги морга и крематория, предоставим ритуальные пренодлежности и
+            транспорт
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card service-card--service">
+        <div class="service-card__ico ico ico--round ico--round-big">
+
+          <svg class="iconsvg obituary ">
+            <use xlink:href="../img/sprite.svg#obituary"></use>
+          </svg>
+
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Оформление документов</h3>
+          <p class="service-card__txt">Обратимся в медицинское учреждение, в котором данный человек находился под
+            наблюдением врачей, и подготовим необходимые документы для погребения или кремации.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card service-card--service">
+        <div class="service-card__ico ico ico--round ico--round-big">
+
+          <svg class="iconsvg graveyard ">
+            <use xlink:href="../img/sprite.svg#graveyard"></use>
+          </svg>
+
+        </div>
+        <div class="service-card__cnt">
+          <h3 class="service-card__title">Благоустройство могилы</h3>
+          <p class="service-card__txt">Уборка и прополка могилы, окраска оградки, возложение цветов, замена намогильных
+            сооружений. По результатам работы
+            пришлем подробный фотоотчет о проделанной работе.</p>
+        </div>
+      </a>
+      <!-- end service-cards -->
+    </div>
+  </div>
+  {% include "parthtml/form-call-dark.html" %}
+</div>
+
+
+{% endblock %}

@@ -117,10 +117,6 @@ textarea:focus {
 	border-radius: 50px;
 	justify-content: center;
   align-items: center;
-	&:not(.btn--title):hover {
-		cursor: pointer;
-		box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
-	}
 	&--title {
 		font-size: 16px;
 		font-weight: 400;
@@ -154,6 +150,11 @@ textarea:focus {
 		}
 	}
 }
+
+a.btn:hover, button.btn:hover, input.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0.8em rgba($c-txt, 0.3);
+  }
 
 .btn-wrap {
   &--center {
