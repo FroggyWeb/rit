@@ -763,7 +763,7 @@
   </div>
 </div>
 
-    <div class="section section--bg form-call-cnt form-call-dark">
+    <div class="section section--bg form-call-cnt form-center form-call-dark">
   <div class="form-call form">
     <div class="btn btn--title btn-center">Мы поможем</div>
     <div class="form__title">У вас остались вопросы?</div>
@@ -782,7 +782,7 @@
           <div class="contact__txt">+7 (924) 240-90-74</div>
         </div>
       </a>
-      <a href="#" class="btn btn--big">Заказать звонок</a>
+      <a href="#form-call-modal" data-fancybox="form" class="btn btn--big">Заказать звонок</a>
     </div>
   </div>
 </div>
@@ -812,7 +812,7 @@
           <div class="contact__txt">+7 (924) 240-90-74</div>
         </div>
       </a>
-      <a href="#" class="btn btn--dark btn--big">Нужна помощь</a>
+      <a href="#form-call-modal" data-fancybox="form" class="btn btn--dark btn--big">Нужна помощь</a>
     </div>
   </div>
   <div class="footer-link">
@@ -953,12 +953,36 @@
 
   </div>
   <div class="footer-info">
-
+    <div class="footer-nav-doc">
+      <a href="">Политика конфиденциальности</a>
+      <a href="">Правила оказания услуг</a>
+    </div>
+    <div class="footer-creator">
+      <p class="light-txt">Дизайн сайта - kharkovdesign</p>
+    </div>
   </div>
 </div>
 
 		<script defer src="../js/vendor.js"></script>
 		<script defer src="../js/main.js"></script>
+    
+
+    <div class="form-center form-call-cnt form-modal" id="form-call-modal">
+  <form action="" class="form-call form" name="formcall">
+    <div class="btn btn--title btn-center">Заказать звонок</div>
+    <div class="form__title">Вам нужна помощь?</div>
+    <p class="form__txt">Мы перезвоним вам в течение 15 минут и проконсультируем по всем интересующим вас вопросам</p>
+    <div class="form-line form-group">
+      <input type="text" name="name" required placeholder="Ваше имя">
+    </div>
+    <div class="form-line form-group">
+      <input type="tel" name="tel" required placeholder="+7 (___) ___-__-__">
+    </div>
+    <div class="btn-wrap btn-wrap--center"><button type="submit" class="btn btn--dark btn--big">Заказать звонок</button></div>
+    <p class="form__footer light-txt">Нажимая на кнопку «Отправить вопрос» вы даете согласие на обработку <a href="#" target="_blank">персональных данных</a></p>
+  </form>
+</div>
+
     
 	</body>
 </html>

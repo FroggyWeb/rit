@@ -75,8 +75,8 @@
           </div>
         </div>
         <div class="btn-wrap product-card__btn">
-          <a href="#" class="btn btn--long btn--dark">Заказать товар</a>
-          <a href="#" class="btn btn--long btn--icon">
+          <a href="#form-prod-modal" data-fancybox="form" class="btn btn--long btn--dark">Заказать товар</a>
+          <a href="tel:+88009233333" class="btn btn--long btn--icon">
             {{ macro.iconSvg('phone') }}
             8 (800) 923-33-33</a>
         </div>
@@ -178,4 +178,9 @@
   {% include "parthtml/form-call-dark.html" %}
 </div>
 
+{% endblock %}
+
+
+{% block form %}
+  {% include "parthtml/form-prod-modal.html" %}
 {% endblock %}

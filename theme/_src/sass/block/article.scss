@@ -6,6 +6,12 @@
   }
 }
 
+.article-aside {
+  @include rmax(xxl) {
+    display: none;
+  }
+}
+
 .mob-aside:not(:empty) {
   margin-bottom: $lg;
 }

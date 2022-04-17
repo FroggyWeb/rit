@@ -141,8 +141,10 @@
 .burger {
 	padding: 10px;
 	display: inline-block;
-	margin-left: $lg;
 	cursor: pointer;
+  @include r(xs) {
+    margin-left: $lg;
+  }
 	@include r(1024) {
 		display: none;
 	}
@@ -333,9 +335,7 @@
 }
 
 .aside-nav {
-  position: sticky;
-  top:0;
-  @include rmax(lg) {
+  @include rmax(xxl) {
     display: none;
   }
   &__title {

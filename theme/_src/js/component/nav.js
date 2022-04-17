@@ -32,9 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var Nav = new hcOffcanvasNav('#main-nav', {
     disableAt: 1024,
     customToggle: '.burger',
-    navTitle: 'All Categories',
+    navTitle: false,
     levelTitles: true,
-    levelTitleAsBack: true
+    levelTitleAsBack: true,
+    levelOpen: "overlap",
+    labelBack: "Назад"
   });
 
   //  const faqList =  new BadgerAccordion('.js-badger-accordion');

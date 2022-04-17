@@ -20,6 +20,10 @@ textarea:focus {
 	}
 }
 
+.fancybox__content {
+  padding: 0;
+}
+
 .form {
 	max-width: 650px;
 	margin: 0 auto;
@@ -122,7 +126,7 @@ textarea:focus {
 		font-weight: 400;
 		color: $c-main;
 		padding: 0.5em 1.5em;
-		margin: 20px 0 20px;
+		margin: 20px 0 30px;
 		@include r(sm) {
 			margin: 0 0 50px;
 		}
@@ -169,13 +173,17 @@ a.btn:hover, button.btn:hover, input.btn:hover {
 
 .form-center {
   text-align: center;
-	background: $c-light url("@/img/bg/bg_form_call.png") no-repeat bottom center;
+
   .form-line--inline {
     justify-content: center;
   }
 }
 
 // Форма заказа звонка
+.form-call-cnt {
+  background: #eceef2 url(@/img/bg/bg_form_call.png) no-repeat bottom;
+}
+
 .form-call-cnt.form-call-dark {
 	background: $c-main url("@/img/bg/bg_form_call-dark.png") no-repeat bottom
 		center;
@@ -195,5 +203,51 @@ a.btn:hover, button.btn:hover, input.btn:hover {
 	}
 }
 
+.form-modal {
+  display: none;
+  .form {padding: $lg;}
+}
 
+.form-group {
+  flex: 1
+}
+.pristine-error {
+  color: #DB6D6D;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.rating-inputs-wrap {
+  align-items: center;
+  .pristine-error {
+    padding: 0 0 0 1em;
+    order: -1;
+  }
+}
+
+.form-prod-modal {
+  background: #eceef2 url(@/img/bg/bg_form_call.png) no-repeat bottom;
+  .form {
+    display: grid;
+    gap: $lg;
+    @include r(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__cart .card {
+    background-color: $c-light;
+    text-align: left;
+  }
+}
+
+.answer-form {
+  max-width: 500px;
+  padding: $lg;
+  background: #eceef2 url(@/img/bg/bg_form_call.png) no-repeat bottom;
+}
+
+.form {
+  &__title {}
+
+  &__txt {}
+}
 

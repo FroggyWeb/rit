@@ -26,7 +26,6 @@ $lg: var(--lg);
 }
 
 $c-main: #6682d4;
-$c-sec: #8ba434;
 $c-light: #eceef2;
 $c-light-b: #E1E5F1;
 $c-dark: #5d78ca;
@@ -35,5 +34,5 @@ $c-ltxt: #9ba1b3;
 $c-link: $c-main;
 
 $hc-offcanvas-nav-background-color: #fff;
-$hc-offcanvas-nav-text-color: #18214d;
-$hc-offcanvas-nav-text-size: 16px;
+$hc-offcanvas-nav-text-color: $c-txt;
+$hc-offcanvas-nav-text-size: 20px;

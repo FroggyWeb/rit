@@ -3,6 +3,10 @@ pre {
 	margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -23,7 +27,7 @@ p:first-child {
 
 .page {
 	flex: 1 0;
-	// overflow: hidden;
+	overflow: hidden;
 }
 
 .container,
@@ -88,7 +92,7 @@ a[href*="tel"] {
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 0;
-	margin: $lg 0 calc(2 * $lg) 0;
+	margin: $lg 0 $lg 0;
 
 	&__contacts {
 		display: flex;
@@ -210,7 +214,7 @@ a[href*="tel"] {
 .title-link {
 	display: flex;
 	align-items: flex-end;
-	margin-bottom: calc(2 * $lg);
+	margin-bottom: $lg;
   .title-section {
     margin-bottom: 0;
   }
@@ -306,10 +310,13 @@ a[href*="tel"] {
 .footer-link {
 	padding: $lg 0;
 	@include r(lg) {
-		padding: calc(2 * $lg) 0 calc(3 * $lg);
+		padding: $lg 0 calc(2 * $lg);
 		display: flex;
 		gap: $lg;
 	}
+  @include r(md) {
+    background: url("@/img/bg/bg_benefits.png") no-repeat bottom right;
+  }
 	&__contact {
 		display: flex;
 		flex-direction: column;
@@ -333,6 +340,8 @@ a[href*="tel"] {
 	}
 	@include r(md) {
 		grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+    max-width: 1200px;
 	}
 	&__title {
 		& > .footer-nav__link {
@@ -345,6 +354,9 @@ a[href*="tel"] {
 		display: inline-block;
 		text-decoration: none;
 		color: $c-txt;
+    &:hover {
+      color: $c-main;
+    }
 	}
 	&__list {
 		margin: 0;
@@ -356,7 +368,29 @@ a[href*="tel"] {
 	}
 }
 
+.footer-info {
+  display: flex;
+  gap:$lg;
+  justify-content: space-between;
+  @include rmax(sm) {
+    flex-direction: column;
+  }
+}
 
+.footer-nav-doc {
+  @include r(md) {
+    display: grid;
+    gap: $lg;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+    max-width: 1200px;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color:#9ba1b3;
+  }
+}
 
 .breadcrumbs {
   margin: 0 0 $lg;
