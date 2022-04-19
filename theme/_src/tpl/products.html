@@ -3,24 +3,26 @@
 <div class="container">
   <div class="article-wrap section">
     <div class="article-aside">
-      <div class="catalog-filter">
-        <div class="filter">
-          <div class="catalog-filter__title">Ценовая категория</div>
-          <div class="filter-price__inputs">
-            <div class="filter__input-wrap">
-              <label for="fprice_from">От</label>
-              <input type="text" id="fprice_from" value="0" name="fprice_from">
+      <div class="catalog-filter" data-da=".mob-aside,1400">
+        <div class="fiters">
+          <div class="filter">
+            <div class="catalog-filter__title">Ценовая категория</div>
+            <div class="filter-price__inputs">
+              <div class="filter__input-wrap">
+                <label for="fprice_from">От:</label>
+                <input type="text" id="fprice_from" value="0" name="fprice_from">
+              </div>
+              <div class="filter__input-wrap">
+                <label for="fprice_to">До:</label>
+                <input type="text" id="fprice_to" value="300000" name="fprice_to">
+              </div>
             </div>
-            <div class="filter__input-wrap">
-              <label for="fprice_to">До</label>
-              <input type="text" id="fprice_to" value="300000" name="fprice_to">
-            </div>
+            <div class="filter-price__range range" id="filter-price__range"></div>
           </div>
-          <div class="filter-price__range range" id="filter-price__range"></div>
-        </div>
-        <div class="filter__action filter">
-          <button id="setfilter" class="btn btn-setfilter">Применить фильтры</button>
-          <a href="#" class="catalog-filter__reset">Показать все товары</a>
+          <div class="filter__action filter">
+            <button id="setfilter" class="btn btn-setfilter">Применить фильтры</button>
+            <a href="#" class="catalog-filter__reset">Показать все товары</a>
+          </div>
         </div>
         <div class="filter-nav filter">
           <div class="catalog-filter__title">Каталог гробов</div>
@@ -55,6 +57,7 @@
       </ul>
 
       <h1 class="title-section">Каталог гробов</h1>
+      <div class="mob-aside"></div>
       <div class="catalog-cards">
         <a href="#" class="card">
           <div class="card__img">

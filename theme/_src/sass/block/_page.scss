@@ -274,7 +274,7 @@ a[href*="tel"] {
 	&__link {
 		margin-top: 50px;
 		.btn {
-			width: 320px;
+			width: 280px;
 		}
 	}
 }
@@ -378,11 +378,15 @@ a[href*="tel"] {
 }
 
 .footer-nav-doc {
+  display: grid;
+  gap: $lg;
+  margin-bottom: $lg;
   @include r(md) {
-    display: grid;
-    gap: $lg;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     flex: 1;
+  }
+  @include r(lg) {
+    grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
   }
   a {
@@ -470,9 +474,30 @@ a[href*="tel"] {
   text-align: center;
   line-height: 28px;
   background-color: $c-light;
+  position: relative;
+  &:hover {
+    .tooltip__body {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
-.b-tooltip {
+.tooltip__body {
+  background: #fff;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .15));
+  color: #242424;
+  max-width: 250px;
+  min-width: 200px;
+  position: absolute;
+  top: -100%;
+  right: 0;
+  padding: 10px;
+  transform: translate(10px, -100%);
+  line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
   &:before {
     content: "";
     background-color: #fff;
@@ -482,22 +507,8 @@ a[href*="tel"] {
     position: absolute;
     bottom: -10px;
     right: 10px;
+    z-index: -1;
   }
-}
-
-.b-tooltip-light {
-  background: #fff;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .15));
-  color: #242424;
-  max-width: 300px;
-
-}
-
-.b-tooltip-dark {
-  background: #242424;
-  background: linear-gradient(to bottom, #6e6e6e 0%, #242424 100%);
-  box-shadow: 0px 0px 6px 2px rgba(110, 110, 110, 1);
-  color: #fff;
 }
 
 .fancybox__content img {

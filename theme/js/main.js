@@ -46,7 +46,7 @@ priceRange();
 
 /***/ }),
 
-/***/ 140:
+/***/ 139:
 /***/ (() => {
 
 const btnMore = document.querySelector('.button-article-more .btn');
@@ -59,15 +59,15 @@ if (btnMore) {
 
 /***/ }),
 
-/***/ 112:
+/***/ 111:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
-/* harmony import */ var _vendor_pristine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(113);
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(110);
+/* harmony import */ var _vendor_pristine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(112);
 /* harmony import */ var _vendor_pristine__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_vendor_pristine__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(114);
+/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(113);
 
 
 
@@ -77,9 +77,11 @@ _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox="form"]
 });
 const inpTel = document.querySelectorAll('[type^="tel"]');
 inpTel.forEach(el => {
-  let phone = (0,imask__WEBPACK_IMPORTED_MODULE_2__["default"])(el, {
-    mask: '+{7}(000)000-00-00',
-    lazy: false
+  el.addEventListener('focus', e => {
+    let phone = (0,imask__WEBPACK_IMPORTED_MODULE_2__["default"])(el, {
+      mask: '+{7}(000)000-00-00',
+      lazy: false
+    });
   });
 });
 _vendor_pristine__WEBPACK_IMPORTED_MODULE_1___default().addMessages('en', {
@@ -177,10 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _vendor_vanilla_js_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
-/* harmony import */ var _vendor_vanilla_js_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_vendor_vanilla_js_tooltip__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(111);
-
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
 
 
 const prodMain = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.product-slider-main', {
@@ -200,11 +199,7 @@ const prodThumb = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.product-s
 prodThumb.on('click', function (swiper) {
   prodMain.slideTo(swiper.clickedIndex);
 });
-const tips = new Tooltip({
-  theme: "light",
-  distance: 20
-});
-_fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind('[data-fancybox="gallery"]', {});
+_fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox.bind('[data-fancybox="gallery"]', {});
 
 /***/ }),
 
@@ -240,8 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(105);
 /* harmony import */ var _component_catalog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(107);
 /* harmony import */ var _component_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(109);
-/* harmony import */ var _component_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(112);
-/* harmony import */ var _component_content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(140);
+/* harmony import */ var _component_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(111);
+/* harmony import */ var _component_content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(139);
 /* harmony import */ var _component_content__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_component_content__WEBPACK_IMPORTED_MODULE_6__);
 
 
@@ -422,7 +417,7 @@ da.init();
 
 /***/ }),
 
-/***/ 113:
+/***/ 112:
 /***/ (function(module) {
 
 (function (global, factory) {
@@ -933,114 +928,6 @@ da.init();
 
   return Pristine;
 });
-
-/***/ }),
-
-/***/ 110:
-/***/ (() => {
-
-/**
-* @fileOverview
-* @author Zoltan Toth
-* @version 0.1
-*/
-
-/**
-* @description
-* Vanilla Javascript tooltip.
-*
-* @class
-* @param {string} [options.theme=dark] - Selects one of the pre-defined tooltip styles - light or dark.
-* @param {number} [options.dist=10] - Specifies the distance in pixels from trigger to tooltip.
-* @param {number} [options.delay=0] - Specifies how long the tooltip remains visible after the mouse leaves the trigger.
-*/
-Tooltip = function (options) {
-  var theme = options.theme || "dark",
-      delay = options.delay || 0,
-      dist = options.distance || 10;
-  /* 
-  * Attaching one mouseover and one mouseout listener to the document
-  * instead of listeners for each trigger 
-  */
-
-  document.body.addEventListener("mouseover", function (e) {
-    if (!e.target.hasAttribute('data-tooltip')) return;
-    var tooltip = document.createElement("div");
-    tooltip.className = "b-tooltip " + "b-tooltip-" + theme;
-    tooltip.innerHTML = e.target.getAttribute('data-tooltip');
-    document.body.appendChild(tooltip);
-    var pos = e.target.getAttribute('data-position') || "center top",
-        posHorizontal = pos.split(" ")[0];
-    posVertical = pos.split(" ")[1];
-    positionAt(e.target, tooltip, posHorizontal, posVertical);
-  });
-  document.body.addEventListener("mouseout", function (e) {
-    if (e.target.hasAttribute('data-tooltip')) {
-      setTimeout(function () {
-        document.body.removeChild(document.querySelector(".b-tooltip"));
-      }, delay);
-    }
-  });
-  /**
-   * Positions the tooltip.
-   * 
-   * @param {object} parent - The trigger of the tooltip.
-   * @param {object} tooltip - The tooltip itself.
-   * @param {string} posHorizontal - Desired horizontal position of the tooltip relatively to the trigger (left/center/right)
-   * @param {string} posVertical - Desired vertical position of the tooltip relatively to the trigger (top/center/bottom)
-   * 
-   */
-
-  function positionAt(parent, tooltip, posHorizontal, posVertical) {
-    var parentCoords = parent.getBoundingClientRect(),
-        left,
-        top;
-    console.log(posVertical);
-
-    switch (posHorizontal) {
-      case "left":
-        left = parseInt(parentCoords.left) - dist - tooltip.offsetWidth;
-
-        if (parseInt(parentCoords.left) - tooltip.offsetWidth < 0) {
-          left = dist;
-        }
-
-        break;
-
-      case "right":
-        left = parentCoords.right + dist;
-
-        if (parseInt(parentCoords.right) + tooltip.offsetWidth > document.documentElement.clientWidth) {
-          left = document.documentElement.clientWidth - tooltip.offsetWidth - dist;
-        }
-
-        break;
-
-      default:
-      case "center":
-        left = parseInt(parentCoords.left) + (parent.offsetWidth - tooltip.offsetWidth) / 2;
-    }
-
-    switch (posVertical) {
-      case "center":
-        top = (parseInt(parentCoords.top) + parseInt(parentCoords.bottom)) / 2 - tooltip.offsetHeight / 2;
-        break;
-
-      case "bottom":
-        top = parseInt(parentCoords.bottom) + dist;
-        break;
-
-      default:
-      case "top":
-        top = parseInt(parentCoords.top) - tooltip.offsetHeight - dist;
-    }
-
-    left = left < 0 ? parseInt(parentCoords.left) : left;
-    top = top < 0 ? parseInt(parentCoords.bottom) + dist : top;
-    tooltip.style.left = left + "px";
-    tooltip.style.top = top + pageYOffset + "px";
-  }
-};
 
 /***/ })
 

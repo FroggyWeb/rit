@@ -102,6 +102,9 @@
   .footer-nav__title {
     padding: 1.5em 0;
     border-top: 1px solid $c-light;
+    &:last-child {
+      border-bottom: 1px solid $c-light;
+    }
   }
   .footer-nav__link.a-btn {
     display: block;

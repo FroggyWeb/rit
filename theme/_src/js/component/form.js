@@ -9,9 +9,11 @@ Fancybox.bind('[data-fancybox="form"]', {
 
 const inpTel = document.querySelectorAll('[type^="tel"]')
 inpTel.forEach((el) => {
-  let phone = IMask(el, {
-    mask: '+{7}(000)000-00-00',
-    lazy: false,
+  el.addEventListener('focus', (e) => {
+    let phone = IMask(el, {
+      mask: '+{7}(000)000-00-00',
+      lazy: false,
+    })
   })
 })
 

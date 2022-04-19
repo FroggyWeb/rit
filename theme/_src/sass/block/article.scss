@@ -2,7 +2,7 @@
   display: grid;
   gap: $lg;
   @include r(xxl) {
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 380px 1fr;
   }
 }
 
@@ -263,6 +263,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: $lg;
+  @include rmax(xs){
+    flex-direction: column;
+    align-items: flex-start;
+  }
   &__data {
     text-transform: uppercase;
     line-height: 1;
@@ -281,6 +286,9 @@
   background: $c-light url('@/img/bg/bg_benefits.png') no-repeat right top;
   .service-card {
     padding: 0;
+  }
+  .service-card__txt {
+    display: block;
   }
 }
 .article-gallery {
@@ -735,7 +743,11 @@
       background-color: $c-main;
       .sort-abc__letter {
         color: #fff;
+        cursor: default;
       }
+    }
+    &:not(.active) .sort-abc__letter:hover {
+      color: $c-main;
     }
   }
   &__letter {
@@ -767,10 +779,25 @@
   }
   .service-card {
     border: 1px solid $c-light-b;
+    &:hover {
+      border-color: $c-main;
+      .service-card__ico {
+        background-color: $c-main;
+        color: #fff;
+      }
+    }
   }
   .service-card__cnt {
     margin-top: 0;
     margin-bottom: $lg;
+  }
+  .service-card__title {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    &:hover {
+      color: $c-main;
+    }
   }
   .contact {
     display: flex;

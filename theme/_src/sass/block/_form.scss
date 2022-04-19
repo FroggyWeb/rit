@@ -69,12 +69,19 @@ textarea:focus {
     max-width: 100%;
     border-radius: 30px;
   }
+  .contact {
+    align-self: center;
+  }
 	&--inline {
 		display: flex;
 		gap: calc(0.75 * $lg);
 		@include rmax(sm) {
-			flex-direction: column;
-      align-items: center;
+			flex-direction: column-reverse;
+      // align-items: center;
+      gap: $lg;
+      .btn {
+        width: 100%;
+      }
 		}
 	}
 }
@@ -209,12 +216,22 @@ a.btn:hover, button.btn:hover, input.btn:hover {
 }
 
 .form-group {
-  flex: 1
+  flex: 1;
+  position: relative;
+  input {
+    height: 100%;
+  }
 }
 .pristine-error {
+  transition: opacity .3s;
+  position: absolute;
+  bottom: -22px;
+  left: 30px;
   color: #DB6D6D;
   font-size: 14px;
-  padding-top: 5px;
+}
+input:focus + .pristine-error {
+  opacity: 0;
 }
 .rating-inputs-wrap {
   align-items: center;
@@ -243,11 +260,5 @@ a.btn:hover, button.btn:hover, input.btn:hover {
   max-width: 500px;
   padding: $lg;
   background: #eceef2 url(@/img/bg/bg_form_call.png) no-repeat bottom;
-}
-
-.form {
-  &__title {}
-
-  &__txt {}
 }
 

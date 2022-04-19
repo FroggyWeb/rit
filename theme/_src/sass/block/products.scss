@@ -33,12 +33,28 @@
 }
 
 .range {
-  margin: 30px 0;
+  margin: 30px 20px;
 }
 
 .catalog-filter {
-  max-width: 400px;
+  display: grid;
+  gap: $lg;
+  background-color: $c-main;
+  color: #fff;
+  padding: $lg;
 
+  @include rm(750, 1399) {
+    grid-template-columns: 1fr 1fr;
+    gap: calc(2*$lg);
+  }
+
+  &__reset {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   &__title {
     font-size: 22px;
     font-weight: 500;
@@ -86,19 +102,6 @@
   }
 }
 
-.catalog-filter {
-  background-color: $c-main;
-  color: #fff;
-  padding: $lg;
-
-  &__reset {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 .filter-nav {
   &__list {
@@ -128,6 +131,9 @@
 
 .catalog-cards {
   display: grid;
+  @include r(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include r(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
