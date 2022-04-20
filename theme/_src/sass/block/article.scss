@@ -564,6 +564,9 @@
     margin-top: $lg;
     max-width: 600px;
   }
+  .service-card__txt {
+    display: block;
+  }
 }
 
 .article .article-list-prod {
@@ -584,7 +587,7 @@
     }
   }
   &__img {
-    max-width: 120px;
+    // max-width: 120px;
   }
   &__title {
     font-family: $f-txt;
