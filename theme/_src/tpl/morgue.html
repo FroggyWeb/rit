@@ -36,228 +36,199 @@
       <div class="sort-abc section">
         <div class="sort-abc__title">Поиск по букве</div>
         <ul class="sort-abc__list">
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">А</a>
+          <li class="sort-abc__item mixitup-control-active" data-filter="all">Все
           </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Б</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Г</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Е</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">И</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">К</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Л</a>
-          </li>
-          <li class="sort-abc__item active">
-            <a href="#" class="sort-abc__letter">М</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Н</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">О</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">П</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Р</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">С</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Т</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">О</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Ш</a>
-          </li>
-          <li class="sort-abc__item">
-            <a href="#" class="sort-abc__letter">Ю</a>
-          </li>
+          <li class="sort-abc__item" data-filter=".letter-1">А</li>
+          <li class="sort-abc__item" data-filter=".letter-2">Б</li>
+          <li class="sort-abc__item" data-filter="letter-3">В</li>
+          <li class="sort-abc__item" data-filter="letter-4">Г</li>
+          <li class="sort-abc__item" data-filter="letter-5">Е</li>
+          <li class="sort-abc__item" data-filter="letter-6">И</li>
+          <li class="sort-abc__item" data-filter="letter-7">К</li>
+          <li class="sort-abc__item" data-filter="letter-8">Л</li>
+          <li class="sort-abc__item" data-filter="letter-9">М</li>
+          <li class="sort-abc__item" data-filter="letter-10">Н</li>
+          <li class="sort-abc__item" data-filter="letter-11">О</li>
+          <li class="sort-abc__item" data-filter="letter-12">П</li>
+          <li class="sort-abc__item" data-filter="letter-13">Р</li>
+          <li class="sort-abc__item" data-filter="letter-14">С</li>
+          <li class="sort-abc__item" data-filter="letter-15">Т</li>
+          <li class="sort-abc__item" data-filter="letter-16">О</li>
+          <li class="sort-abc__item" data-filter="letter-17">Ш</li>
+          <li class="sort-abc__item" data-filter="letter-18">Ю</li>
         </ul>
       </div>
-      <div class="sort-letter">A</div>
-      <div class="service-cards morgue-cards">
-        <div class="service-card service-card--service">
-          <div class="service-card__ico ico ico--round ico--round-big">
-            {{ macro.iconSvg('morgue') }}
-          </div>
-          <div class="service-card__cnt">
-            <a href="#" class="service-card__title">Морг Максимилиановской больницы</a>
-            <a href="tel:+79242409074" class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('phone') }}
+      <div class="js-mixitup">
+        <div class="sort-letter mix letter-1">A</div>
+        <div class="service-cards morgue-cards mix letter-1">
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round ico--round-big">
+              {{ macro.iconSvg('morgue') }}
+            </div>
+            <div class="service-card__cnt">
+              <a href="#" class="service-card__title">Морг Максимилиановской больницы</a>
+              <a href="tel:+79242409074" class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('phone') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">+7 (924) 240-90-74</div>
+                </div>
+              </a>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('map') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+                </div>
               </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">+7 (924) 240-90-74</div>
-              </div>
-            </a>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('map') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('clock') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+                </div>
               </div>
             </div>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('clock') }}
+            <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
+          </div>
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round ico--round-big">
+              {{ macro.iconSvg('morgue') }}
+            </div>
+            <div class="service-card__cnt">
+              <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
+              <a href="tel:+79242409074" class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('phone') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">+7 (924) 240-90-74</div>
+                </div>
+              </a>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('map') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+                </div>
               </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('clock') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+                </div>
               </div>
             </div>
+            <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
           </div>
-          <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
         </div>
-        <div class="service-card service-card--service">
-          <div class="service-card__ico ico ico--round ico--round-big">
-            {{ macro.iconSvg('morgue') }}
-          </div>
-          <div class="service-card__cnt">
-            <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
-            <a href="tel:+79242409074" class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('phone') }}
+        <div class="sort-letter mix letter-2">Б</div>
+        <div class="service-cards morgue-cards mix letter-2">
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round ico--round-big">
+              {{ macro.iconSvg('morgue') }}
+            </div>
+            <div class="service-card__cnt">
+              <a href="#" class="service-card__title">Морг Максимилиановской больницы</a>
+              <a href="tel:+79242409074" class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('phone') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">+7 (924) 240-90-74</div>
+                </div>
+              </a>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('map') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+                </div>
               </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">+7 (924) 240-90-74</div>
-              </div>
-            </a>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('map') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('clock') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+                </div>
               </div>
             </div>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('clock') }}
+            <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
+          </div>
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round ico--round-big">
+              {{ macro.iconSvg('morgue') }}
+            </div>
+            <div class="service-card__cnt">
+              <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
+              <a href="tel:+79242409074" class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('phone') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">+7 (924) 240-90-74</div>
+                </div>
+              </a>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('map') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+                </div>
               </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('clock') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+                </div>
               </div>
             </div>
+            <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
           </div>
-          <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
-        </div>
-      </div>
-      <div class="sort-letter">Б</div>
-      <div class="service-cards morgue-cards">
-        <div class="service-card service-card--service">
-          <div class="service-card__ico ico ico--round ico--round-big">
-            {{ macro.iconSvg('morgue') }}
-          </div>
-          <div class="service-card__cnt">
-            <a href="#" class="service-card__title">Морг Максимилиановской больницы</a>
-            <a href="tel:+79242409074" class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('phone') }}
+          <div class="service-card service-card--service">
+            <div class="service-card__ico ico ico--round ico--round-big">
+              {{ macro.iconSvg('morgue') }}
+            </div>
+            <div class="service-card__cnt">
+              <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
+              <a href="tel:+79242409074" class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('phone') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">+7 (924) 240-90-74</div>
+                </div>
+              </a>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('map') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+                </div>
               </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">+7 (924) 240-90-74</div>
-              </div>
-            </a>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('map') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
+              <div class="contact">
+                <div class="contact__ico ico ico--round">
+                  {{ macro.iconSvg('clock') }}
+                </div>
+                <div class="contact__cnt">
+                  <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
+                </div>
               </div>
             </div>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('clock') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
-              </div>
-            </div>
+            <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
           </div>
-          <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
-        </div>
-        <div class="service-card service-card--service">
-          <div class="service-card__ico ico ico--round ico--round-big">
-            {{ macro.iconSvg('morgue') }}
-          </div>
-          <div class="service-card__cnt">
-            <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
-            <a href="tel:+79242409074" class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('phone') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">+7 (924) 240-90-74</div>
-              </div>
-            </a>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('map') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
-              </div>
-            </div>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('clock') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
-              </div>
-            </div>
-          </div>
-          <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
-        </div>
-        <div class="service-card service-card--service">
-          <div class="service-card__ico ico ico--round ico--round-big">
-            {{ macro.iconSvg('morgue') }}
-          </div>
-          <div class="service-card__cnt">
-            <a href="#" class="service-card__title">Морг российской военно-медицинской академии им. С.М. Кирова</a>
-            <a href="tel:+79242409074" class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('phone') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">+7 (924) 240-90-74</div>
-              </div>
-            </a>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('map') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">пр-кт Авиастроителей, 28А</div>
-              </div>
-            </div>
-            <div class="contact">
-              <div class="contact__ico ico ico--round">
-                {{ macro.iconSvg('clock') }}
-              </div>
-              <div class="contact__cnt">
-                <div class="contact__txt">Пн-Пт с 9:00 до 14:00; Сб-Вс – выходной</div>
-              </div>
-            </div>
-          </div>
-          <a href="#" data-map="35.258, 65.546" class="service-card__map-link">Посмотреть на карте</a>
         </div>
       </div>
 
@@ -267,4 +238,8 @@
   {% include "parthtml/form-call.html" %}
 </div>
 
+{% endblock %}
+
+{% block scriptfooter %}
+<script defer src="@/js/map.js"></script>
 {% endblock %}

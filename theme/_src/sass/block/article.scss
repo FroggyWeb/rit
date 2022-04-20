@@ -743,23 +743,16 @@
     border-radius: 50%;
     text-align: center;
     margin-right: .5em;
-    &.active {
-      background-color: $c-main;
-      .sort-abc__letter {
-        color: #fff;
-        cursor: default;
-      }
-    }
-    &:not(.active) .sort-abc__letter:hover {
-      color: $c-main;
-    }
-  }
-  &__letter {
-    display: block;
-    text-decoration: none;
-    color: inherit;
     line-height: 2em;
     font-weight: 500;
+    cursor: pointer;
+    &.mixitup-control-active {
+      background-color: $c-main;
+      color: #fff;
+    }
+    &:not(.mixitup-control-active):hover {
+      color: $c-main;
+    }
   }
 }
 

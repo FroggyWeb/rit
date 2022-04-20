@@ -1,12 +1,12 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 107:
+/***/ 108:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(108);
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(109);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -47,7 +47,12 @@ priceRange();
 /***/ }),
 
 /***/ 139:
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(140);
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mixitup__WEBPACK_IMPORTED_MODULE_0__);
 
 const btnMore = document.querySelector('.button-article-more .btn');
 
@@ -57,6 +62,12 @@ if (btnMore) {
   });
 }
 
+const mix = document.querySelector('.js-mixitup');
+
+if (mix) {
+  const mixer = mixitup__WEBPACK_IMPORTED_MODULE_0___default()(mix);
+}
+
 /***/ }),
 
 /***/ 111:
@@ -64,7 +75,7 @@ if (btnMore) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(110);
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(107);
 /* harmony import */ var _vendor_pristine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(112);
 /* harmony import */ var _vendor_pristine__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_vendor_pristine__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(113);
@@ -128,6 +139,8 @@ forms.forEach(el => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(106);
 /* harmony import */ var hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(107);
+
 
 
 function initAcc(elem, option, media) {
@@ -161,27 +174,53 @@ initAcc('.faq-list', true);
 initAcc('.footer-nav', true);
 document.addEventListener('DOMContentLoaded', function () {
   const logo = document.querySelector('.header__logo');
+  const phone = document.querySelector('.header__contacts--tel').cloneNode(true);
+  const phone2 = phone.cloneNode(true);
+  const addr = document.querySelector('.header__contacts--addr').cloneNode(true);
+  const btnHelp = document.querySelector('.footer-about__right .btn').cloneNode(true);
   const Nav = new (hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default())('#main-nav', {
     disableAt: 1024,
     customToggle: '.burger',
+    pushContent: '.page',
     navTitle: false,
     levelTitles: true,
     levelTitleAsBack: true,
     levelOpen: "overlap",
     labelBack: "Назад",
-    navTitle: logo
+    navTitle: logo,
+    width: 300
+  }); // insert addition element
+
+  const navHeader = document.querySelector('#hc-nav-1 .nav-title');
+  const navBody = document.querySelector('#hc-nav-1 .nav-content');
+  const navfooter = document.createElement("div");
+  const formCall = document.getElementById('form-call-modal');
+  navHeader.appendChild(phone);
+  navfooter.classList.add('mob-nav-footer');
+  navfooter.appendChild(addr);
+  navfooter.appendChild(phone2);
+  navfooter.appendChild(btnHelp);
+  navBody.appendChild(navfooter);
+  btnHelp.addEventListener('click', e => {
+    e.preventDefault();
+    Nav.close(); // console.log(formCall)
+
+    const fancybox = new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox([{
+      src: formCall,
+      type: "html"
+    }]);
   }); //  const faqList =  new BadgerAccordion('.js-badger-accordion');
 });
 
 /***/ }),
 
-/***/ 109:
+/***/ 110:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(107);
 
 
 const prodMain = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.product-slider-main', {
@@ -235,11 +274,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_dynamicAdapt_dev__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_dynamicAdapt_dev__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _component_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _component_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(105);
-/* harmony import */ var _component_catalog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(107);
-/* harmony import */ var _component_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(109);
+/* harmony import */ var _component_catalog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(108);
+/* harmony import */ var _component_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(110);
 /* harmony import */ var _component_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(111);
 /* harmony import */ var _component_content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(139);
-/* harmony import */ var _component_content__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_component_content__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
