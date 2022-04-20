@@ -57,9 +57,16 @@ if (linkMap.length > 0) {
     let coord = e.target.dataset.map.split(',');
     const addrMapWrap = document.createElement("div");
     addrMapWrap.setAttribute('id', 'addr-map');
-    addrMapWrap.style.cssText += 'width:100%;height:400px;';
+    addrMapWrap.style.cssText += 'width:100%;height:600px;';
     console.log(document.body);
-    document.body.append(addrMapWrap);
+    document.body.append(addrMapWrap); //Данные карточки
+
+    const card = e.target.closest('.service-card'),
+          cardName = card.querySelector('.service-card__title').textContent,
+          cardAddr = card.querySelector('.js-addr').textContent,
+          cardTel = card.querySelector('.js-tel').textContent,
+          cardTime = card.querySelector('.js-time').textContent;
+    console.log(cardName);
     ymaps.ready(addr);
 
     function addr() {
@@ -69,10 +76,8 @@ if (linkMap.length > 0) {
         controls: ['fullscreenControl', 'zoomControl']
       });
       const contactOffice = new ymaps.Placemark(coord, {
-        hintContent: 'Офис',
-        balloonContentHeader: "Балун метки",
-        balloonContentBody: "Содержимое <em>балуна</em> метки",
-        balloonContentFooter: "Подвал"
+        balloonContentHeader: cardName,
+        balloonContentBody: `<b>Телефон:</b> ${cardTel} <br> <b>Время работы:</b> ${cardTime} <br> <b>Адрес:</b> ${cardAddr}`
       }, {
         iconLayout: 'default#image',
         iconImageHref: '../img/map_marker.svg',
@@ -81,13 +86,12 @@ if (linkMap.length > 0) {
       });
       addrMap.behaviors.disable('scrollZoom');
       addrMap.geoObjects.add(contactOffice);
-    } // const fmap = new Fancybox([
-    //     {
-    //       src: addrMapWrap,
-    //       type: "iFrame",
-    //     },
-    //   ]);
+    }
 
+    const fmap = new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox([{
+      src: addrMapWrap,
+      type: "html"
+    }]);
   });
 }
 
