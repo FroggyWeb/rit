@@ -108,13 +108,6 @@ a.service-card--service:hover {
 }
 
 .service-cards--inner {
-  .service-card {
-    border: 1px solid $c-light-b;
-    transition: all .3s;
-    &:hover {
-      border-color: $c-main;
-    }
-  }
   display: grid;
   gap: $lg;
   @include r(xs) {
@@ -125,6 +118,21 @@ a.service-card--service:hover {
   }
   @include r(xxl) {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .service-card {
+    border: 1px solid $c-light-b;
+    transition: all .3s;
+    @include r(lg) {
+      min-height: 500px;
+    }
+    &:hover {
+      border-color: $c-main;
+    }
+  }
+  .service-card__cnt {
+    @include r(lg) {
+      margin-top: 160px;
+    }
   }
 }
 

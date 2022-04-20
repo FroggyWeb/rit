@@ -128,12 +128,18 @@ textarea:focus {
 	border-radius: 50px;
 	justify-content: center;
   align-items: center;
+  font-size: 14px;
+  min-height: 50px;
+  @include r(xs){
+    font-size: 16px;
+  }
 	&--title {
 		font-size: 16px;
 		font-weight: 400;
 		color: $c-main;
 		padding: 0.5em 1.5em;
 		margin: 20px 0 30px;
+    min-height: auto;
 		@include r(sm) {
 			margin: 0 0 50px;
 		}

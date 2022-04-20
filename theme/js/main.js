@@ -160,14 +160,16 @@ function initAcc(elem, option, media) {
 initAcc('.faq-list', true);
 initAcc('.footer-nav', true);
 document.addEventListener('DOMContentLoaded', function () {
-  var Nav = new (hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default())('#main-nav', {
+  const logo = document.querySelector('.header__logo');
+  const Nav = new (hc_offcanvas_nav__WEBPACK_IMPORTED_MODULE_0___default())('#main-nav', {
     disableAt: 1024,
     customToggle: '.burger',
     navTitle: false,
     levelTitles: true,
     levelTitleAsBack: true,
     levelOpen: "overlap",
-    labelBack: "Назад"
+    labelBack: "Назад",
+    navTitle: logo
   }); //  const faqList =  new BadgerAccordion('.js-badger-accordion');
 });
 
