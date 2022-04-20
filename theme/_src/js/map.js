@@ -53,7 +53,7 @@ if (linkMap.length > 0) {
 
     const addrMapWrap = document.createElement("div")
     addrMapWrap.setAttribute('id', 'addr-map')
-    addrMapWrap.style.cssText += 'width:100%;height:400px,display:none'
+    addrMapWrap.style.cssText += 'width:100%;height:400px;'
     console.log(document.body)
     document.body.append(addrMapWrap)
 
@@ -81,5 +81,12 @@ if (linkMap.length > 0) {
     addrMap.behaviors.disable('scrollZoom')
     addrMap.geoObjects.add(contactOffice)
     }
+
+    // const fmap = new Fancybox([
+    //     {
+    //       src: addrMapWrap,
+    //       type: "iFrame",
+    //     },
+    //   ]);
   })
 }
