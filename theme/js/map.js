@@ -1,99 +1,22 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 141:
+/***/ "./_src/js/map.js":
+/*!************************!*\
+  !*** ./_src/js/map.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(107);
-
-const APIYandex = 'b0a390a5-1d8f-43b3-aa72-4e632db36295';
-
-const loadScript = (url, callback) => {
-  const script = document.createElement('script');
-  script.addEventListener('load', () => {
-    callback();
-  });
-  script.src = url;
-  document.body.append(script);
-};
-
-loadScript(`https://api-maps.yandex.ru/2.1/?apikey=${APIYandex}&lang=ru_RU`, () => {
-  const contact = document.getElementById('map');
-
-  if (contact) {
-    ymaps.ready(init);
-  }
-
-  function init() {
-    const contactMap = new ymaps.Map("map", {
-      center: [59.92154775321649, 30.32832846308001],
-      zoom: 15,
-      controls: ['fullscreenControl', 'zoomControl']
-    });
-    const contactOffice = new ymaps.Placemark([59.92154775321649, 30.32832846308001], {
-      hintContent: 'Офис',
-      balloonContentHeader: "Балун метки",
-      balloonContentBody: "Содержимое <em>балуна</em> метки",
-      balloonContentFooter: "Подвал"
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '../img/map_marker.svg',
-      iconImageSize: [40, 40],
-      iconImageOffset: [-20, -20]
-    });
-    contactMap.behaviors.disable('scrollZoom');
-    contactMap.geoObjects.add(contactOffice);
-  }
-}); // Показ места на карте
-
-const linkMap = document.querySelectorAll('.service-card__map-link');
-
-if (linkMap.length > 0) {
-  document.addEventListener('click', e => {
-    if (!e.target.classList.contains('service-card__map-link')) return;
-    e.preventDefault();
-    let coord = e.target.dataset.map.split(',');
-    const addrMapWrap = document.createElement("div");
-    addrMapWrap.setAttribute('id', 'addr-map');
-    addrMapWrap.style.cssText += 'width:100%;height:600px;';
-    console.log(document.body);
-    document.body.append(addrMapWrap); //Данные карточки
-
-    const card = e.target.closest('.service-card'),
-          cardName = card.querySelector('.service-card__title').textContent,
-          cardAddr = card.querySelector('.js-addr').textContent,
-          cardTel = card.querySelector('.js-tel').textContent,
-          cardTime = card.querySelector('.js-time').textContent;
-    console.log(cardName);
-    ymaps.ready(addr);
-
-    function addr() {
-      const addrMap = new ymaps.Map("addr-map", {
-        center: coord,
-        zoom: 15,
-        controls: ['fullscreenControl', 'zoomControl']
-      });
-      const contactOffice = new ymaps.Placemark(coord, {
-        balloonContentHeader: cardName,
-        balloonContentBody: `<b>Телефон:</b> ${cardTel} <br> <b>Время работы:</b> ${cardTime} <br> <b>Адрес:</b> ${cardAddr}`
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/map_marker.svg',
-        iconImageSize: [40, 40],
-        iconImageOffset: [-20, -20]
-      });
-      addrMap.behaviors.disable('scrollZoom');
-      addrMap.geoObjects.add(contactOffice);
-    }
-
-    const fmap = new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox([{
-      src: addrMapWrap,
-      type: "html"
-    }]);
-  });
-}
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fancyapps/ui */ \"./node_modules/.pnpm/@fancyapps+ui@4.0.26/node_modules/@fancyapps/ui/dist/fancybox.esm.js\");\n\nconst APIYandex = 'b0a390a5-1d8f-43b3-aa72-4e632db36295';\n\nconst loadScript = (url, callback) => {\n  const script = document.createElement('script');\n  script.addEventListener('load', () => {\n    callback();\n  });\n  script.src = url;\n  document.body.append(script);\n};\n\nloadScript(`https://api-maps.yandex.ru/2.1/?apikey=${APIYandex}&lang=ru_RU`, () => {\n  const contact = document.getElementById('map');\n\n  if (contact) {\n    ymaps.ready(init);\n  }\n\n  function init() {\n    const contactMap = new ymaps.Map(\"map\", {\n      center: [59.92154775321649, 30.32832846308001],\n      zoom: 15,\n      controls: ['fullscreenControl', 'zoomControl']\n    });\n    const contactOffice = new ymaps.Placemark([59.92154775321649, 30.32832846308001], {\n      hintContent: 'Офис',\n      balloonContentHeader: \"Балун метки\",\n      balloonContentBody: \"Содержимое <em>балуна</em> метки\",\n      balloonContentFooter: \"Подвал\"\n    }, {\n      iconLayout: 'default#image',\n      iconImageHref: '../img/map_marker.svg',\n      iconImageSize: [40, 40],\n      iconImageOffset: [-20, -20]\n    });\n    contactMap.behaviors.disable('scrollZoom');\n    contactMap.geoObjects.add(contactOffice);\n  }\n}); // Показ места на карте\n\nconst linkMap = document.querySelectorAll('.service-card__map-link');\n\nif (linkMap.length > 0) {\n  document.addEventListener('click', e => {\n    if (!e.target.classList.contains('service-card__map-link')) return;\n    e.preventDefault();\n    let coord = e.target.dataset.map.split(',');\n    const addrMapWrap = document.createElement(\"div\");\n    addrMapWrap.setAttribute('id', 'addr-map');\n    addrMapWrap.style.cssText += 'width:100%;height:600px;';\n    console.log(document.body);\n    document.body.append(addrMapWrap); //Данные карточки\n\n    const card = e.target.closest('.service-card'),\n          cardName = card.querySelector('.service-card__title').textContent,\n          cardAddr = card.querySelector('.js-addr').textContent,\n          cardTel = card.querySelector('.js-tel').textContent,\n          cardTime = card.querySelector('.js-time').textContent;\n    console.log(cardName);\n    ymaps.ready(addr);\n\n    function addr() {\n      const addrMap = new ymaps.Map(\"addr-map\", {\n        center: coord,\n        zoom: 15,\n        controls: ['fullscreenControl', 'zoomControl']\n      });\n      const contactOffice = new ymaps.Placemark(coord, {\n        balloonContentHeader: cardName,\n        balloonContentBody: `<b>Телефон:</b> ${cardTel} <br> <b>Время работы:</b> ${cardTime} <br> <b>Адрес:</b> ${cardAddr}`\n      }, {\n        iconLayout: 'default#image',\n        iconImageHref: '../img/map_marker.svg',\n        iconImageSize: [40, 40],\n        iconImageOffset: [-20, -20]\n      });\n      addrMap.behaviors.disable('scrollZoom');\n      addrMap.geoObjects.add(contactOffice);\n    }\n\n    const fmap = new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox([{\n      src: addrMapWrap,\n      type: \"html\"\n    }]);\n  });\n}\n\n//# sourceURL=webpack://gulp4wp5/./_src/js/map.js?");
 
 /***/ })
 
@@ -171,6 +94,18 @@ if (linkMap.length > 0) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -195,7 +130,7 @@ if (linkMap.length > 0) {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			1: 0
+/******/ 			"map": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -245,7 +180,7 @@ if (linkMap.length > 0) {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [2], () => (__webpack_require__(141)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], () => (__webpack_require__("./_src/js/map.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

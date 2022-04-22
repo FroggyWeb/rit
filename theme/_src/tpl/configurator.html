@@ -1,0 +1,24 @@
+{% extends "./parthtml/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="article-wrap section">
+    <div class="article-aside"></div>
+    <main class="article-main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__link">Калькулятор тарифов</span>
+        </li>
+      </ul>
+      <h1 class="title-section">Ваши товары и услуги</h1>
+      <div id="app"></div>
+    </main>
+  </div>
+</div>
+{% endblock %}
+
+{% block scriptfooter %}
+<script defer src="@/js/configurator.js"></script>
+{% endblock %}
