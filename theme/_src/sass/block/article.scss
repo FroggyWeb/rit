@@ -77,12 +77,14 @@
       columns: 2;
       column-gap: calc(2 * $lg);
     }
-
     hr {
       display: block;
       height: 0;
       border: none;
       break-after: column;
+      & + h2 {
+        margin-top: 0!important;
+      }
     }
   }
   &--limited {

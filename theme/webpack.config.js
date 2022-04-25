@@ -49,12 +49,10 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    // new webpack.ProvidePlugin({
-    //   $: "jquery",
-    //   jQuery: "jquery",
-    //   "window.jQuery": "jquery",
-    //   "window.$": "jquery",
-    // }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: true
+    })
   ],
 
   resolve: {
