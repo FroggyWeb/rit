@@ -10,6 +10,7 @@ specifiers:
   babel-loader: ^8.2.4
   browser-sync: ^2.27.9
   cssnano: ^5.1.5
+  file-loader: ^6.2.0
   gulp: ^4.0.2
   gulp-cheerio: ^1.0.0
   gulp-if: ^3.0.0
@@ -62,6 +63,7 @@ devDependencies:
   babel-loader: 8.2.4_fa907c5a4f16ccc493e21649ccc59574
   browser-sync: 2.27.9
   cssnano: 5.1.5_postcss@8.4.12
+  file-loader: 6.2.0_webpack@5.70.0
   gulp: 4.0.2
   gulp-cheerio: 1.0.0
   gulp-if: 3.0.0
@@ -1963,7 +1965,7 @@ packages:
   /axios/0.21.4_debug@4.3.2:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.14.9_debug@4.3.2
+      follow-redirects: 1.14.9
     transitivePeerDependencies:
       - debug
     dev: true
@@ -1971,7 +1973,7 @@ packages:
   /axios/0.26.1:
     resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
-      follow-redirects: 1.14.9_debug@4.3.2
+      follow-redirects: 1.14.9
     transitivePeerDependencies:
       - debug
     dev: false
@@ -3586,6 +3588,17 @@ packages:
     resolution: {integrity: sha512-MMMQ0ludy/nBs1/o0zVOiKTpG7qMbonKUzjJgQFEuvq6INZ1OraKPRAWkBq5vlKLOUMpmNYG1JoN3oDPUQ9m3Q==}
     dev: true
 
+  /file-loader/6.2.0_webpack@5.70.0:
+    resolution: {integrity: sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      loader-utils: 2.0.2
+      schema-utils: 3.1.1
+      webpack: 5.70.0
+    dev: true
+
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
     requiresBuild: true
@@ -3694,7 +3707,7 @@ packages:
     resolution: {integrity: sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==}
     dev: true
 
-  /follow-redirects/1.14.9_debug@4.3.2:
+  /follow-redirects/1.14.9:
     resolution: {integrity: sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -3702,8 +3715,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dependencies:
-      debug: 4.3.2
 
   /for-in/1.0.2:
     resolution: {integrity: sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=}
@@ -4397,7 +4408,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.9_debug@4.3.2
+      follow-redirects: 1.14.9
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug

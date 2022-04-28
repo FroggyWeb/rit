@@ -16,6 +16,7 @@
     "babel-loader": "^8.2.4",
     "browser-sync": "^2.27.9",
     "cssnano": "^5.1.5",
+    "file-loader": "^6.2.0",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-if": "^3.0.0",
