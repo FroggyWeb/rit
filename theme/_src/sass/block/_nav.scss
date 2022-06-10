@@ -28,6 +28,8 @@
 	.nav {
 		order: 10;
 		margin-top: $lg;
+    width: 100%;
+    margin-left: 70px;
 	}
 	.nav > .nav__list > .nav__item > .nav__link {
 		font-size: 18px;
