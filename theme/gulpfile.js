@@ -142,12 +142,25 @@ function watchFiles() {
   gulp.watch("./html/*.html").on("change", browsersync.reload);
 }
 
+function svgopt() {
+  return gulp
+    .src(folder.src + "sprite/**/*.svg")
+    .pipe(cheerio({
+            run: ($) => {
+                $('[fill]').removeAttr('fill');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+    .pipe(gulp.dest(folder.dest + "img/svg-bw"));
+}
+
 // define complex tasks
 const js = gulp.series(scripts);
 const build = gulp.parallel(css, js, html, sprite);
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 // export tasks
+exports.svgopt = svgopt;
 exports.css = css;
 exports.js = js;
 exports.build = build;
